@@ -1,0 +1,58 @@
+{% extends 'basic.html' %}
+{% block body %}
+{% load static %}
+
+<section class="about_us pb-5">
+    <h2 id="about_heading"><span>Door to Door Survey</span>
+        <div class="img_head_container">
+                <img src="static/assets/images/Vector 2.svg" id="vc_2_img" alt="">
+                <img src="static/assets/images/Vector 3.svg" id="vc_3_img" alt="">
+            </div>
+    </h2>
+ 
+  <!-- properties venn diagram section start -->
+  <div class="container-fluid three_overlapping_circles">
+     <div class="row no-gutters">
+       <!-- <div class="col-12 col-md-6 col-lg-4"> -->
+         <div class="our_mission" style="margin-left:200px;">
+           <h4> Through door to door survey ,we can assess the following points:</h4>
+           <hr style="width: 122px; height: 0px;margin-left:0; border: 2px solid #2A5BBA;">
+           <li>Name and mobile number of each family head</li>       
+            <li>Assessing caste support in the area</li>
+            <li>Candidate's favour and opposition on the basis of area and family </li>
+            <li>Keeping the social media user in touch</li>
+            <li>Assessing the effective issue of the area according to the family</li>
+            
+        </div>
+       <!-- </div> -->
+       <div class="col-12 col-lg-4 ">
+        <div class="img_contain ">
+          
+             <img src="{% static 'assets/images/Rectangle 12.svg' %}" alt="" id="img2_surv">
+          
+          
+            <!-- <img src="{% static 'assets/images/Group 7.svg' %}" alt="" id="img1_surv"> -->
+         
+        </div>
+      </div>
+       </div>
+  </div>
+  <div class="container-fluid three_overlapping_circles">
+    <div class="row no-gutters">
+      <!-- <div class="col-12 col-md-6 col-lg-4"> -->
+        <div class="our_mission" style="margin-left:200px;margin-top: 2px;">
+          <h4> Benefits of survey:</h4>
+          <hr style="width: 122px; height: 0px;margin-left:0; border: 2px solid #2A5BBA;">
+          <li>The voter list becomes clear (through verification) from door to door survey through the electoral roll</li>       
+           <li>Databases received from door to door surveys can be able to build a very strong hold (via Social Media, SMS, Voice Call) through IT Services</li>
+          
+           
+       </div>
+      <!-- </div> -->
+       
+      </div>
+ </div>
+
+  <!-- properties venn diagram section stop -->
+</section>
+{% endblock %}

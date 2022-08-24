@@ -1,0 +1,185 @@
+.img_head_container{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.img_head_container_rev{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.img_head_container_rev img{
+    transform: rotate(-180deg);
+    
+}
+.team_members{
+    margin:2em 1em;
+    background: rgba(217, 217, 217, 0.35);
+border-radius: 17px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+/* text-align: center; */
+}
+
+.team_members h2 span{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 30.08px;
+line-height: 129.47%;
+/* identical to box height, or 39px */
+letter-spacing: 0.085em;
+text-transform: capitalize;
+color: #2A5BBA;
+/* margin-top: 1em; */
+}
+.team_members h2 span{
+  background-image: linear-gradient(to bottom ,rgba(217, 217, 217, 0.35) 50%, rgba(195,215,255,1) 100% );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom left ;
+}
+
+.team{
+margin:2em 1em;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+text-align: center;
+}
+.team .card{
+    width:208px;
+    height:auto;
+    border-radius: 13px;
+    border: none;
+    background: transparent;
+    margin:4em;
+}
+
+.team .card .member_name span{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 18.52px;
+line-height: 129.47%;
+/* identical to box height, or 24px */
+
+text-align: center;
+letter-spacing: 0.085em;
+text-transform: capitalize;
+color: #000000;
+}
+.team .card .post span{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 15.52px;
+line-height: 129.47%;
+/* identical to box height, or 20px */
+
+text-align: center;
+text-transform: capitalize;
+letter-spacing: 0.085em;
+
+color: #2E2E2E;
+
+}
+
+/* member 1 */
+.team .card .member_img{
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0.0) 85%, rgba(0,0,0,0.3) 15%), url(/assets/images/member1.png);
+    background-size: 208px;
+    width:208px;
+    height:208px;
+    /* height:208px; */
+    border-radius: 13px;
+    text-align: center;
+    padding: 20px;
+    
+}
+/* member2 */
+.team .card .member_img2{
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0.0) 85%, rgba(0,0,0,0.3) 15%), url(/assets/images/member2.png);
+    background-size: 208px;
+    width:208px;
+    height:208px;
+    /* height:208px; */
+    border-radius: 13px;
+    text-align: center;
+    padding: 20px;
+    
+}
+/* member3 */
+.team .card .member_img3{
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0.0) 85%, rgba(0,0,0,0.3) 15%), url(/assets/images/member3.png);
+    background-size: 208px;
+    width:208px;
+    height:208px;
+    /* height:208px; */
+    border-radius: 13px;
+    text-align: center;
+    padding: 20px;
+    
+}
+/* member4 */
+.team .card .member_img4{
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0.0) 85%, rgba(0,0,0,0.3) 15%), url(/assets/images/member4.png);
+    background-size: 208px;
+    width:208px;
+    height:208px;
+    /* height:208px; */
+    border-radius: 13px;
+    text-align: center;
+    padding: 20px;
+    
+}
+/* member5 */
+.team .card .member_img5{
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0.0) 85%, rgba(0,0,0,0.3) 15%), url(/assets/images/member5.png);
+    background-size: 208px;
+    width:208px;
+    height:208px;
+    /* height:208px; */
+    border-radius: 13px;
+    text-align: center;
+    padding: 20px;
+    
+}
+/* member6 */
+.team .card .member_img6{
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0.0) 85%, rgba(0,0,0,0.3) 15%), url(/assets/images/member6.png);
+    background-size: 208px;
+    width:208px;
+    height:208px;
+    /* height:208px; */
+    border-radius: 13px;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+/* ============================address section ============================== */
+.foot_card{
+     background: #366CD6;
+     width:32em;
+  }
+  .icon_foot{
+      padding:.5em .8em;
+  }
+  
+  .card_add_margin{
+      margin-left: 2.8em;
+
+  }
+  
+  .skewBox{
+      background:#edff57;
+      background: linear-gradient(170deg,#F2F2F2 50%, rgb(0, 41, 64) 50%);
+    	margin-top:-3em;	
+        padding-top:5em;		
+  }
+  .container_bg_card{
+      padding:0em 6em;
+      
+  }

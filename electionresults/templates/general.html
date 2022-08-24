@@ -1,0 +1,96 @@
+{% extends 'basic.html' %}
+
+{% block body %} 
+{% load static %}
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+<section class="politic_survey_banner ">
+  <div class="container-fluid pt-5 px-0 ">
+    <div class="row no-gutters ">
+      <div class="col-12 col-lg-5">
+        <div class="surv_card">
+          <div class="surv_card-body">
+            <h3>
+              General Election Results
+            </h3>
+            
+            <p style="font-size:18px;">India is a democratic country, there are Lok Sabha elections every five years to elect the Prime Minister, in which people vote for the party of their choice and the candidate of the winning party is represented by the Prime Minister of our country. Lok Sabha elections are also called general elections. The Lok Sabha has a maximum of 552 members. The party which manages 273 seats is considered victorious and is eligible to form the central government. On this basis, the parties are free to announce their prime ministerial candidate before the election or after the victory. The Prime Ministerial candidate is won by the party that has won. 17th General (Lok Sabha) result of the elections will be decalred on 23rd May by Election Commission of India.
+
+              The Bharatiya Janata Party won the 2014 Lok Sabha and 2019 Lok Sabha elections, and both times the party was made the Prime Minister of India by Shri Man Narendra Modi. In the 2019 Lok Sabha elections, the BJP had the support of 303 seats with a majority, while the Congress won 52 seats. In the 2014 Lok Sabha elections, the BJP had the support of 282 seats with a majority, while the Congress won 44 seats. In the 2009 Lok Sabha elections, the Congress had the support of 206 seats with a majority, while the BJP won 116 seats.</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-7 ">
+        <div class="img_contain ">
+          
+             <img src="{% static 'assets/images/Rectangle 12.svg' %}" alt="" id="img2_surv" style="margin-left:100px; height:500px; width:850px;">
+          
+          
+            <!-- <img src="static/assets/images/Group 7.svg" alt="" id="img1_surv"> -->
+       </div>
+      </div>
+      <div class="col-12 ">
+        <p id="last_surv_sec">
+          Our IT Based Services - Pre Poll Survey, Election war Room Call Center, 
+          Election Management Software, Booth Man
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+    
+    <div class="col-12"><p id="last_survey_sec">
+      <h3>Distribution of votes percentage of major parties General (Lok Sabha) Elections</h3></p></div>
+
+        <div class="row" style="padding:10px;margin-left: 500px; margin-right: 15px;margin-top:10px;margin-bottom:100px;height:max-content;">
+          <div class="col">
+           
+                 <table>
+                  <tr>
+                      <th>Year</th>
+                      <th>Party</th>
+                      <th>Seats</th>
+                      <th>Votes</th>
+                    </tr>
+                    {% for d in data %}
+                    <tr>
+                      <td>{{d.year}}</td>
+                      <td>{{d.party}}</td>
+                      <td>{{d.seats}}</td>
+                      <td>{{d.vote}}</td>
+                    </tr>
+                    {% endfor %}
+                    <!-- <tr>
+                      <td>DMK</td>
+                      <td>151</td>
+                      <td>56</td>
+                    </tr>
+                    <tr>
+                      <td>INC</td>
+                      <td>125</td>
+                      <td>54</td>
+                    </tr> -->
+                    </table>
+                  
+                  </div>
+                  </div>
+                </div>
+                 
+                    
+{% endblock %}

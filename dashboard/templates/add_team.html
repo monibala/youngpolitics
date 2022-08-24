@@ -1,0 +1,61 @@
+{% include 'admin_base.html' %} 
+{% block body %} 
+{% load static %} 
+<div class="row">
+    
+    <div class="col-md-6 col-sm-12 col-xs-12" style="width:100%; height:100%;">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+            
+                 <h2 style="margin-left:600px;"> Add Team </h2>
+                </div>
+            <div class="panel-body" style="margin-left:400px;">
+               
+
+
+<form action=" " method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+   
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Name</h6>
+      </div>
+      <div class="col-sm-9 text-secondary">
+          
+        <input type="text" name="name" value=" "/>
+        
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-3">
+          <h6 class="mb-0">Designation</h6>
+        </div>
+        <div class="col-sm-9 text-secondary">
+          <input type="text" name="designation" value=" "/>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-3">
+          <h6 class="mb-0">Image</h6>
+        </div>
+        <div class="col-sm-9 text-secondary">
+          <input type="file" name="images" value=""/>
+        </div>
+      </div>
+      <hr> 
+    
+      <button type="submit" class="btn btn-secondary" >Save</button>
+
+  
+</form>
+  </div>
+</div>
+</div>
+
+
+
+
+{% endblock %}

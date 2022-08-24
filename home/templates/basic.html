@@ -1,0 +1,1517 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Thename</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Enquiry Modal Close Button -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    
+    <!-- fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Tienne:wght@700&display=swap" rel="stylesheet">
+     
+    <!-- <link rel="stylesheet" href="home.css"> -->
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    <link href="{% static 'css/about.css' %}" rel="stylesheet">
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+    <link href="{% static 'css/msg.css' %}" rel="stylesheet">
+    <link href="{% static 'css/our_team.css' %}" rel="stylesheet">
+    <link href="{% static 'css/w_c_ec.css' %}" rel="stylesheet">
+    <link href="{% static 'css/wwd.css' %}" rel="stylesheet">
+    <link href="{% static 'css/contact.css' %}" rel="stylesheet">
+    <link href="{% static 'progresscircle.css' %}" rel="stylesheet">
+   
+    <style>
+        /* body{
+    /* background-color: #D1E0FF; */
+   /* background-color: #FFF;
+} */
+
+/*top social links nav*/
+.img_head_container{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.header_top_contain img{
+  padding:.2em 0em;
+  margin:0em .4em;
+  /* height:1.125em;
+  width:1.125em; */
+}
+
+#nav_logo{
+  font-family: 'Tienne', serif;
+font-style: normal;
+font-weight: 700;
+font-size: 30.77px;
+line-height: 34px;
+text-align: left;
+color: #FFFFFF;
+}
+#navbar_top{
+  background-color: #002940;
+}
+.nav-link{
+  font-family: 'Poppins' sans-serif;;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 111.47%;
+text-align: center;
+letter-spacing: 0.035em;
+color: #D7D7D7;
+}
+
+.in_contact{
+  display:inline-block;
+  padding:0 .2em 0em .4em;
+}
+.in_contact img{
+  padding:0 .4em;
+}
+.in_contact a,span{
+  text-decoration: none;
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height:111.47%;
+/* identical to box height, or 15px */
+
+letter-spacing: 0.035em;
+
+color: #FFFFFF;
+}
+.in_contact a:hover,span:hover{
+  text-decoration: underline;
+  
+}
+.btn_enq{
+  margin-top: .2em;
+  margin-right: -15px;
+  text-align: end;
+}
+#enq{
+  padding:.3em 1.5em;
+  background-color: #BF1238;
+  margin-right: 0;
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 111.47%;
+text-align: center;
+
+color: #FFFFFF;
+}
+.nav-center_class{
+    margin-top:-.2em;
+}
+.nav-bottom_class{
+   margin-top:-2em;
+   margin-bottom:0em; 
+   padding-bottom:0;
+}
+@media screen and (max-width:992px) {
+
+    .in_contact{
+  display:block;
+  padding:0 .2em 0em .4em;
+}
+.btn_enq{
+  margin-top: .5em;
+  margin-bottom: .5em;
+  margin-left: .5em;
+  text-align: left;
+}
+}
+@media screen and (max-width:756px) {
+.nav-center_class{
+margin-top:.5em;
+margin-bottom: .5em;
+}
+.nav-bottom_class{
+    margin-top: .2em;
+}
+}
+
+/*================================= Footer section styles ================================= */
+/*footer*/
+footer{
+      background: #002940;
+  }
+    #foot_list{
+        padding-left:0px ;
+        margin-left:0px ;
+        text-align:left;
+    }
+    footer ul li{
+    color:#fff;
+    font-size:16px;
+    font-weight:400;
+    line-height:27.2px;
+    margin-left:0;
+    
+    }
+  footer ul li .foot_head{
+      font-size:20px; 
+      font-weight:600;
+     
+  }
+  .footer_hr{
+    text-align:left;
+    width:30%;
+   border:1px solid #fff;
+    background-color:#fff;
+     margin-left: 0;
+     margin-top: 4px;
+  }
+  
+  footer p{
+      font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 14.08px;
+line-height: 166.97%;
+/* or 20px */
+
+letter-spacing: 0.085em;
+color:#fff;
+/* color: rgba(229, 229, 229, 0.7); */
+
+  }
+footer p a{
+    
+   color:#fff;
+   text-decoration: none;
+/* color: rgba(229, 229, 229, 0.7); */
+
+  }
+  footer p a:hover{
+    
+   color:#fff;
+   text-decoration:underline;
+/* color: rgba(229, 229, 229, 0.7); */
+
+  }
+
+  /* =============================================History change section ================================= */
+ .ech{
+   margin:3em 2em;
+ }
+ .ech .img_content{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+  
+ }
+ .ech #img_1ech{
+   margin-top: 3em;
+ }
+ .ech .content h4{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 23.08px;
+line-height: 111.47%;
+/* identical to box height, or 26px */
+
+letter-spacing: 0.085em;
+
+color: #2A5BBA;
+ }
+ .ech .content p{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 19.08px;
+line-height: 129.47%;
+/* or 25px */
+
+letter-spacing: 0.085em;
+
+color: #000000;
+ }
+
+ /*========================================Our Capabilities section =======================================*/
+  .our_cap{
+   margin:3em 2em;
+ }
+ .our_cap .oc_head h3{
+   text-align: center;
+ }
+ .our_cap .oc_head h3 span{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 30.08px;
+line-height: 129.47%;
+/* identical to box height, or 39px */
+
+letter-spacing: 0.085em;
+
+color: #2A5BBA;
+ }
+.our_cap .oc_head h3 #oc_hehad_cap{
+  background-image: linear-gradient(to bottom ,rgba(255,255,255,1) 50%, rgba(195,215,255,1) 100% );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom left ;
+}
+.our_cap .oc_head h3 span:hover{
+    text-decoration: none;
+}
+.card-container{
+    display: flex;
+    flex-direction: row;
+    
+    /* justify-content: center; */
+    /* align-items: center; */
+
+}
+.card-container .card-img-container{
+    display:flex;
+    width: 60px;
+    height: 60px;
+    padding:0 11px;
+    border-radius: 50%; 
+    justify-content: center;
+    align-items: center;
+}
+.card-container .card-content .card_head{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 24.08px;
+line-height: 129.47%;
+/* or 31px */
+
+letter-spacing: 0.085em;
+}
+
+.card-container .card-content{
+    margin: 0  2em 0 2em;
+}
+
+.card-container .card-content p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18.08px;
+line-height: 148.97%;
+/* or 27px */
+
+letter-spacing: 0.085em;
+
+color: #3E3E3E;
+}
+/* card1 */
+.card-container #card-img-container1{
+    background-color: #FFA7A7;
+}
+.card-container .card-content #card1_head{
+   color: #B41515;
+}
+/* card 2 */
+.card-container #card-img-container2{
+    background-color: #FFEE97;  
+}
+.card-container .card-content #card2_head{
+   color: #AA8F00;
+}
+
+/* card 3 */
+.card-container #card-img-container3{
+    background-color: #ACEBBE;  
+}
+.card-container .card-content #card3_head{
+color: #007020;
+}
+
+/* card 4 */
+.card-container #card-img-container4{
+    background-color: #FDAFFF;   
+    padding:0 15px;
+}
+.card-container .card-content #card4_head{
+color: #AF03B2;
+}
+/* card 5 */
+.card-container #card-img-container5{
+    background-color: #A1DDFF;
+    padding:0 15px;
+}
+.card-container .card-content #card5_head{
+color: #007020;
+}
+
+/* card 6 */
+.card-container #card-img-container6{
+    background-color: #FFC09C;
+    width: 61px;
+    height: 61px;
+    padding:0 21px;
+}
+.card-container .card-content #card6_head{
+ color: #9A3700;
+}
+
+/*========================fancy border line start================================================== */
+.fancy-border {
+  width: 100%;
+  height: auto;
+  text-align:left;
+  border-top: 10px solid;
+  border-image:   linear-gradient(to right, #FB8181 20%, #6CE08D 20%, #6CE08D 40%,#558FFF 40%, #558FFF 60%, #F4D73C 60%,#F4D73C 80%,#E23DE6 80%) 5;
+  background-color: #D1E0FF;
+  -ms-transform: skewY(4deg); /* IE 9 */
+  transform: skewY(4deg);
+  margin:4em 0em;
+}
+.my-content{
+    -ms-transform: skewY(-4deg); /* IE 9 */
+  transform: skewY(-4deg);
+}
+.fancy_border_content{
+    padding:4em 0em;
+}
+.fancy_border_content h3 #ecs_head{
+ background-image: linear-gradient(to bottom ,#D1E0FF 50%, rgba(195,215,255,1) 100% );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom left ;
+}
+.fancy_border_content h3 span{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 30.08px;
+line-height: 129.47%;
+/* or 39px */
+
+letter-spacing: 0.085em;
+
+color: #2A5BBA;
+
+}
+.fancy_border_content p{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 21.08px;
+line-height: 129.47%;
+/* or 27px */
+
+letter-spacing: 0.085em;
+
+color: #000000;
+}
+.img-container-fancy{
+    display:flex;
+    margin-top:-24px;
+   
+    justify-content: center;
+    align-items: center;
+    height:90%;
+    width:80%;
+    background-color: #3572E8;
+    border-radius: 0 0 50% 50%;
+    -ms-transform: skewY(4deg); /* IE 9 */
+  transform: skewY(4deg);
+}
+.img-container-fancy img{
+    /* width:499px;
+    height:277px; */
+    max-width: 80%;
+    height:auto;
+-ms-transform: skewY(-4deg); /* IE 9 */
+  transform: skewY(-4deg);
+}
+
+@media  screen and (max-width:992px) {
+    .img-container-fancy{
+    margin-top:0em;
+    width:100%;
+    max-width: 100%;
+    padding: 2em 0em;
+    background-color: #3572E8;
+    border-radius: 10px;
+    /* -ms-transform: skewY(-4deg); 
+  transform: skewY(-4deg); */
+}
+.img-container-fancy img{
+    /* width:499px;
+    height:277px; */
+    max-height:100%;
+    width:auto;
+   /* -ms-transform: skewY(4deg);
+  transform: skewY(4deg); */
+}
+}
+
+/*================= Election care Serve Also==================================== */
+.elec_serve_also{
+    padding:2em 0em;
+    text-align: center;
+}
+.elec_serve_also h3 #esa_head{
+  background-image: linear-gradient(to bottom ,rgba(255,255,255,1) 50%, rgba(195,215,255,1) 100% );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom left ;
+}
+.elec_serve_also h3 span{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 30.08px;
+line-height: 129.47%;
+/* or 39px */
+
+letter-spacing: 0.085em;
+text-align: center;
+color: #2A5BBA;
+}
+.elec_serve_also .ecsa_container .esa_btn{
+    padding:.5em 1.5em;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #719BEC;
+    margin:1em 2em;
+    border-radius: 10px;
+}
+.elec_serve_also .ecsa_container a{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20.08px;
+line-height: 129.47%;
+/* identical to box height, or 26px */
+letter-spacing: 0.085em;
+color: #FFFFFF;
+}
+
+
+.ecsa_container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding:0em 2em;
+    justify-content: center;
+}
+/*========================pcnp section ================================================== */
+.pcnp {
+  width: 100%;
+  height: auto;
+  text-align:left;
+  border-top: 10px solid;
+  border-image:   linear-gradient(to right, #E23DE6 20%, #F4D73C 20%, #F4D73C 40%,#558FFF 40%, #558FFF 60%, #6CE08D 60%,#6CE08D 80%,#FB8181 80%) 5;
+  background-color: #D1E0FF;
+  -ms-transform: skewY(-4deg); /* IE 9 */
+  transform: skewY(-4deg);
+  margin:4em 0em 0em;
+  padding-bottom: 4em;
+}
+.my-content_pcnp{
+    -ms-transform: skewY(4deg); /* IE 9 */
+  transform: skewY(4deg);
+}
+.pcnp_content{
+    padding:4em 0em;
+}
+.pcnp_content h3 #pcnp_head{
+ background-image: linear-gradient(to bottom ,#D1E0FF 50%, rgba(195,215,255,1) 100% );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom left ;
+}
+.pcnp_content h3 span{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 30.08px;
+line-height: 129.47%;
+/* or 39px */
+
+letter-spacing: 0.085em;
+
+color: #2A5BBA;
+
+}
+.pcnp_content p{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 21.08px;
+line-height: 129.47%;
+/* or 27px */
+
+letter-spacing: 0.085em;
+
+color: #000000;
+}
+.img-container-pcnp{
+    display:flex;
+    margin-top:-19px;
+   
+    justify-content: center;
+    align-items: center;
+    height:90%;
+    width:80%;
+    background-color: #3572E8;
+    border-radius: 0 0 50% 50%;
+    -ms-transform: skewY(-4deg); /* IE 9 */
+  transform: skewY(-4deg);
+}
+.img-container-pcnp img{
+    /* width:499px;
+    height:277px; */
+    max-width:80%;
+    height:auto;
+-ms-transform: skewY(4deg); /* IE 9 */
+  transform: skewY(4deg);
+}
+@media  screen and (max-width:992px) {
+    .img-container-pcnp{
+    margin-top:-1px;
+    width:100%;
+    max-width: 100%;
+    padding: 2em 0em;
+    background-color: #3572E8;
+    border-radius: 10px;
+    /* -ms-transform: skewY(-4deg); 
+  transform: skewY(-4deg); */
+}
+.img-container-pcnp img{
+    /* width:499px;
+    height:277px; */
+    max-height:100%;
+    width:auto;
+   /* -ms-transform: skewY(4deg);
+  transform: skewY(4deg); */
+}
+}
+
+/*================================================Address section==========================================================*/
+.foot_card{
+     background: #366CD6;
+     width:32em;
+  }
+  .icon_foot{
+      padding:.5em .8em;
+  }
+  
+  .card_add_margin{
+      margin-left: 2.8em;
+
+  }
+  
+  .skewBox{
+      background:#edff57;
+      background: linear-gradient(170deg, rgb(209, 224, 255) 50%, rgb(0, 41, 64) 50%);
+    	margin-top:-4em;			
+  }
+  .container_bg_card{
+      padding:0em 6em;
+      
+  }
+
+   /*=======================================================Political Survey banner=============================================*/
+  .politic_survey_banner{
+    margin:1em 2em;
+    background-color: #DEEAFF;
+    padding:0;
+    border-bottom-left-radius: 2em;
+    /* width: 90vw;  */
+  }
+  .politic_survey_banner .surv_card{
+    padding-left: 1em;
+  }
+  .politic_survey_banner .surv_card h3{
+      font-family: 'Poppins';
+       font-style: normal;
+       font-weight: 700;
+      font-size: 26.6883px;
+       line-height: 123%;
+       /* or 33px */
+
+       letter-spacing: 0.085em;
+
+       color: #002940;
+
+  }
+ .politic_survey_banner .surv_card h5{
+       font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16.69px;
+    line-height: 123%;
+    /* or 21px */
+
+    letter-spacing: 0.085em;
+
+    color: #515151;
+ } 
+
+ .politic_survey_banner .surv_card p{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 12.69px;
+line-height: 123%;
+/* or 16px */
+
+letter-spacing: 0.085em;
+
+color: #000000;
+ }
+
+ .politic_survey_banner .surv_card a{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 15.69px;
+line-height: 123%;
+/* or 19px */
+text-decoration: none;
+letter-spacing: 0.085em;
+margin:0em .5em;
+ }
+  .politic_survey_banner .surv_card #srv_btn1{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #3572E8;
+    border-radius: 11px;
+    color:#FFFFFF;
+    padding:1em 2em;
+    margin:1em 1em;
+ }
+  .politic_survey_banner .surv_card #srv_btn2 {
+    background: #D5E3FF;
+    border: 2px solid #2A5BBA;
+    color:#2A5BBA;
+    border-radius: 11px;
+    padding:1em 2em;
+    margin:1em 1em;
+ }
+  .politic_survey_banner .surv_card #srv_btn1:hover{
+    background-color: #D5E3FF;
+    color:#2A5BBA;
+ }
+  .politic_survey_banner .surv_card #srv_btn2:hover{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #3572E8;
+    color:#FFFFFF;
+ }
+.politic_survey_banner .surv_card .survey_buttons{
+  display:flex;
+  flex-wrap: wrap;
+  margin:3em 1.5em;
+}
+ .politic_survey_banner .surv_card .check_txt{
+   margin:2em 1em;
+ }
+ .politic_survey_banner .surv_card .check_txt span{
+   margin:1em .4em;
+   font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 12.69px;
+line-height: 123%;
+/* identical to box height, or 16px */
+
+letter-spacing: 0.095em;
+
+color: #000000;
+
+ }
+
+ .politic_survey_banner .img_contain{
+     position: relative;
+   width: 100%;
+  /* height: 100%; */
+ 
+
+ }
+ #img1_surv{
+   position:absolute;
+   top:0em;
+   right:.8em;
+  max-width: 100%;
+  /* width:auto; */
+ }
+ #img2_surv{
+   position:relative;
+   /* top:5.6em; */
+   left:0px;
+   top:54%;
+   bottom:0px;
+  max-width: 100%;
+  max-height:100%
+  /* border-radius:12%; */
+ 
+ }
+ #last_surv_sec{
+   font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 17px;
+line-height: 123%;
+/* or 24px */
+
+letter-spacing: 0.085em;
+background: #002940;
+color:#FFF;
+padding: 1em 0.8em;
+margin-bottom: 0px;
+border-bottom-left-radius: 2em;
+ }
+
+ .card_blog-1{
+    padding:9em 1em 1em;
+    background-image: url(/static/assets/images/Rectangle\ 88.png);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.91) -4.17%, rgba(53, 53, 53, 0) 75.24%), url(/static/assets/images/Rectangle\ 88.png);
+    border-radius: 0px 0px 12px 12px;
+    border:none;
+    background-repeat: no-repeat;
+    text-align: left;
+    position:relative;
+}
+/* header navigation  */
+.column {
+    float: left;
+    }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    /* .nav-item :hover .nav-item .dropdown .dropdown-menu {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    } */
+    /* Hover function */
+    @media screen {
+            .dropdown:hover .dropdown-menu,
+            .btn-group:hover .dropdown-menu {
+                display: block;
+            }
+            .dropdown-menu {
+                margin: auto;
+            }
+            .dropdown-toggle {
+                margin: auto;
+            }
+            .navbar .dropdown-toggle,
+            .nav-tabs .dropdown-toggle {
+                margin: auto;
+            }
+           
+          }
+      /* @media screen {
+        .dropdown-menu:hover .dropdown-item,
+            .btn-group:hover .dropdown-item {
+                display: block;
+            }
+            .dropdown-menu {
+                margin: auto;
+            }
+            .dropdown-toggle {
+                margin: auto;
+            }
+            .navbar .dropdown-toggle,
+            .nav-tabs .dropdown-toggle {
+                margin: auto;
+            }
+           
+      } */
+
+
+.dropdown-menu > .dropdown-item:hover {
+display: block;
+}
+.dropdown-menu {
+  position:absolute;
+  display: none;
+}
+/* Contact */
+.collapsible {
+  background-color: #002940;
+  color: white;
+  /* cursor: pointer; */
+  padding-top: 2px;
+  padding-bottom:2px;
+  /* width: 45%;
+  height:2px; */
+  border:none;
+  outline: none;
+  margin-bottom:5px;
+  text-align: left;
+  color:white;
+  font-size: 15px;
+}
+
+/* .active, .collapsible:hover {
+  background-color: #555;
+} */
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  color:#1863a6;
+  /* background-color: #f1f1f1; */
+}
+/* Enquiry Form */
+* {
+        box-sizing: border-box;
+      }
+      .openBtn {
+        /* display: flex;
+        justify-content: left; */
+       
+        margin-top: .5em;
+  margin-bottom: .5em;
+  margin-left:550px!important;
+  text-align: left;
+      }
+      .openButton {
+        border: none;
+        
+        border-radius: 5px;
+        background-color: #1c87c9;
+        color: white;
+        padding: 14px 20px;
+        cursor: pointer;
+        
+        /* position: fixed; */
+      }
+      .Popup {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        
+      }
+      .formPopup {
+        display: none;
+        position: fixed;
+        left: 75%;
+        top: 5%;
+        /* transform: translate(-50%, 5%); */
+        transform: translate(10px, 5%);
+        border: 3px solid #999999;
+        z-index: 9;
+        height: 30px;
+      }
+      .formContainer {
+        max-width: 300px;
+        padding: 20px;
+        background-color: #fff;
+      }
+      .formContainer input[type=text],
+      .formContainer input[type=number] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 20px 0;
+        border: none;
+        background: #eee;
+      }
+      .formContainer input[type=text]:focus,
+      .formContainer input[type=number]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      .btn {
+        padding: 12px 20px;
+        border: none;
+        background-color: #8ebf42;
+        color: #fff;
+        cursor: pointer;
+        width: 50%;
+        margin-bottom: 15px;
+        opacity: 0.8;
+      }
+      .formContainer .cancel {
+        background-color: #cc0000;
+      }
+      .formContainer .btn:hover,
+      .openButton:hover {
+        opacity: 1;
+      }
+      .formContainer .select {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 20px 0;
+        border: none;
+        background: #eee;
+        background-color: #ddd;
+        outline: none;
+      }
+      
+    </style>
+     <script type="text/javascript">
+     	document.addEventListener("DOMContentLoaded", function(){
+		
+		  window.addEventListener('scroll', function() {
+	       
+			if (window.scrollY > 80) {
+				document.getElementById('navbar_top').classList.add('fixed-top');
+				// add padding top to show content behind navbar
+				navbar_height = document.querySelector('.navbar').offsetHeight;
+				document.body.style.paddingTop = navbar_height + 'px';
+		  	} else {
+			 	document.getElementById('navbar_top').classList.remove('fixed-top');
+				 // remove padding top from body
+				document.body.style.paddingTop = '0';
+		  	} 
+		  });
+    	}); 
+    	// DOMContentLoaded  end
+     </script>
+  </head>
+  <body>
+      <!-- navbar start -->
+      <!-- Social links nav -->
+     <div class="container-fluid social_nav">
+         <div class="row ">
+             <div class="col-12 text-center">
+            <div class="header_top_contain">
+              <a href="https://www.facebook.com/"> <img src="{% static 'assets/images/fb.svg' %}"></a>
+              <a href="https://www.instagram.com/?hl=en"> <img src="{% static 'assets/images/insta.svg' %}"></a>
+              <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"> <img src="{% static 'assets/images/tweet.svg' %}"></a>
+               <a href="https://www.linkedin.com/"> <img src="{% static 'assets/images/linkedIn.svg' %}"></a>
+             </div>
+            </div>
+         </div>
+     </div>
+      <header id="navbar_top" class="header">
+    
+        <div class="container-fluid  ">
+                        <div class="row no-gutters">
+                            <div class="col-12 col-lg-6 text-left ">
+                              <div class="row no-gutters">
+                                <div class="col-12">
+                                    
+                                        <div class="in_contact">
+                                       <img src="{% static 'assets/images/phone.svg' %}" alt="logo"><span>+91 983 456 7894</span>
+                                    </div>
+                                     <div class="in_contact">
+                                       <a class="" href="gmail.com">
+                                          <img src="{% static 'assets/images/email.svg' %}" alt="logo"><span>random@gmail.com</span>
+                                       </a>
+                                     </div>
+                                
+                                   
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="col-12 col-lg-6">
+                                <!-- <div class="btn_enq"> -->
+                                    <!-- <a id="enq" href="{% url 'enquiry' %">
+                                      Enquiry
+                                    </a> -->
+                                  <div class="openBtn">
+                                    <button class="openButton" onclick="openForm()">Enquiry</button>
+                                </div>
+                                <!-- Enquiry Form -->
+                                <div class="Popup">
+                                  <div class="formPopup" id="popupForm">
+                                    <form actio="" class="formContainer">
+                                      <span onclick="closeForm()" class="w3-button w3-display-topright">&times;</span>
+                                      <div class="form-group">
+                                          <!-- <div class="row"> -->
+                                        <!-- <div class="col"> -->
+                                          <!-- <label for="firstNameInput">First Name</label>
+                                          <input type="text" id="firstNameInput" class="form-control" > -->
+                                        <!-- </div> -->
+                                        <!-- <div class="col"> -->
+                                          <label for="name"> Name</label>
+                                          <input type="text" id="name" name="name" class="form-control">
+                                        <!-- </div> -->
+                                      <!-- </div> -->
+                                      </div>
+                                      
+                                      <div class="form-group">
+                                        <label for="inputEmail">Email</label>
+                                        <input type="email" id="email" name="email" class="form-control" >
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="inputAddress2">Number</label>
+                                        <input type="tel" id="number" name="number" class="form-control"  >
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="serviceSelect">Select a service</label>
+                                        <select class="form-control" id="serviceSelect">
+                                          <option>Digital Marketing</option>
+                                          <option>UI Development</option>
+                                          <option>Marketing</option>
+                                          <option>Lorem ipsum</option>
+                                          <option>Lorem ipsum</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="comment">Comment or Message</label>
+                                        <textarea class="form-control" id="comment" rows="4"></textarea>
+                                      </div>
+                                      <button type="submit" class="btn" value="submit">SUBMIT</button>
+                                    </form>
+                
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters nav-center_class" >
+                          <div class="d-none d-md-inline text-white " style="width:40%;">
+                            <hr style="border:1px solid #fff; width:100%; background-color:#fff; margin:1.8em 0;">
+                          </div>
+                          <div class="col text-sm-left text-md-center text-white">
+                            
+                                <h3 id="nav_logo" class="text-md-center">
+                                  The<br>
+                                  Name
+                                </h3>
+
+                           
+                            </div>
+                           <div class="d-none d-md-inline text-white " style="width:40%;">
+                            <hr style="border:1px solid #fff; width:100%; background-color:#fff; margin:1.8em 0; margin-left:auto;">
+                          </div>
+                        </div>
+                         <div class="row no-gutters nav-bottom_class">
+                            <div class="col-12">
+                               <nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+       <ul class="navbar-nav mr-auto ">
+       <li class="nav-item">
+          <a class="nav-link " href="{% url 'index' %}"><span class="text-uppercase">Home</span></a>
+        </li>
+        <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle " href="#" data-toggle="dropdown"> <span class="text-uppercase">Discover Us</span> </a>
+				<div class="dropdown-menu dropdown-menu-end fade-down"style="background-color: #DEEAFF;">
+					   <a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a>
+             <a class="dropdown-item" href="{% url 'message' %}">Message</a>
+             <a class="dropdown-item" href="{% url 'ourteam' %}">Our Team</a>
+             <a class="dropdown-item" href="{% url 'whatwedo' %}">What we do</a>
+             <a class="dropdown-item" href="{% url 'wcec' %}">Why choose us</a>
+				</div> 
+			 </li>
+        
+       <li class="nav-item dropdown">
+           
+          <a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Political Survey / Campaign</span></a>
+          <div class="dropdown-menu dropdown-menu-end fade-down" style="background-color: #DEEAFF;">
+             <a class="dropdown-item" href="{% url 'poll' %}">Opinion Poll/Exit Poll</a>
+             <a class="dropdown-item" href="{% url 'surveyresearch' %}">Political Survey Research</a>
+             <a class="dropdown-item" href="{% url 'dtdsurvey' %}">Door to Door Survey</a>
+             <a class="dropdown-item" href="{% url 'boothlabel' %}">Booth Label Micro</a>
+             <a class="dropdown-item" href="{% url 'wrcc' %}">War Room Call Center</a>
+             <a class="dropdown-item" href="#">Voter List in Excel</a>
+             <a class="dropdown-item" href="{% url 'print' %}">Voter Slip Printing</a>
+             <a class="dropdown-item" href="{% url 'voteappeal' %}">Vote Appeal and Awareness</a>
+          
+             <!-- <a class="dropdown-item" href="#"  data-toggle="dropdown">Campaign Management </a> -->
+             <ul class="dropdown-menu" style="background-color: #DEEAFF;display: none;">
+              <li><a class="dropdown-item" href="#">Digital Media Election Campaign</a></li>
+              <li><a class="dropdown-item" href="#">Social Media Campaign Management</a></li>
+             </ul>
+             
+             <a class="dropdown-item" href="{% url 'campaign' %}">Election Campaign  Management</a>
+             <a class="dropdown-item" href="{% url 'docfilm' %}">Political Documentary Film</a>
+          
+
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown" style="margin-right:700px;">
+           
+          <a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">IT Services</span></a>
+          <div class="dropdown-menu dropdown-menu-end fade-down" style="width: 880px;padding: -5px;background-color: #DEEAFF;">
+           <div class="row">
+               <div class="column">
+               <ul class="list-unstyled"> <a class="dropdown-item" href="#"><u>Digital Marketing</u></a>
+             
+                <li><a class="dropdown-item" href="{% url 'fbpromotion' %}">facebook Promotion</a></li>
+                <li><a class="dropdown-item" href="{% url 'twitter' %}">twitter Promotion</a></li>
+                <li><a class="dropdown-item" href="{% url 'whatsapp' %}">Whatsapp Marketing</a></li>
+                <li><a class="dropdown-item" href="{% url 'youtube' %}">Youtube Marketing</a></li>
+             </ul>
+              </div>
+              
+             
+           
+              <div class="column">
+                <ul class="list-unstyled ">  <a class="dropdown-item" href="#"><u>Bulk Sms</u></a>
+                    <li><a class="dropdown-item" href="#">Promotional Sms</a></li>
+                    <li><a class="dropdown-item" href="#">Transitional Sms</a></li>
+                    <li><a class="dropdown-item" href="#">Election Sms <br>Campaigning</a></li>
+                    <li><a class="dropdown-item" href="#">OTP Services</a></li>
+                    </ul>
+            
+              </div>
+              <div class="column">
+                <ul class="list-unstyled ">  <a class="dropdown-item" href="#"><u>Voice Call</u></a>
+                <li><a class="dropdown-item" href="#">Voice Broadcast</a></li>
+                <li><a class="dropdown-item" href="#">Voice with DTMF</a></li>
+                <li><a class="dropdown-item" href="#">Text to Voice</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="list-unstyled "><a class="dropdown-item" href="#"><u>Ivr Services</u></a>
+                  <li><a class="dropdown-item" href="#">Hosted IVR</a></li>
+                <li><a class="dropdown-item" href="#">TollFree NumberF</a></li>
+                <li><a class="dropdown-item" href="#">Misscall Alert</a></li>
+                <li><a class="dropdown-item" href="#">Virtual Number</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="list-unstyled "><a class="dropdown-item" href="#"><u>Software/Mobile App</u></a>
+                  <li><a class="dropdown-item" href="#">Website</a></li>
+                <li><a class="dropdown-item" href="#">Janta Darbar Solution</a></li>
+                <li><a class="dropdown-item" href="#">Election Management<br> Software/Mobile App</a></li>
+                </ul>
+              </div>
+            
+                </div>
+          
+
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link " href="#"><span class="text-uppercase">Elections</span></a>
+          
+        </li> -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> <span class="text-uppercase">Elections</span> </a>
+            <div class="dropdown-menu dropdown-menu-end fade-down" style="background-color: #DEEAFF;">
+                   <a class="dropdown-item" href="{% url 'general' %}">General Elections Result</a>
+                   <a class="dropdown-item" href="#">Manipur Elections</a>
+                   <!-- <div class="dropdown"> -->
+                    <!-- <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     UttarPradesh Election
+                    </a> -->
+                    <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> -->
+                  <a class="dropdown-item " href="#" data-target="DropdownContent" id="DropdownContent" data-toggle="dropdown" >UttarPradesh Elections</a>
+                  <!-- <div class="sub-nav"  ><ul class="menu-depth-1 sub-menu sub-nav-group" style="background-color: #DEEAFF;display:none;" >  -->
+                  <ul class="dropdown-menu dropdown-menu-end fade-down"  id="DropdownContent" style="background-color: #DEEAFF;display:none;">
+                     <a class="dropdown-item"  href="#">UP Lokshabha Result</a>
+                      <a class="dropdown-item" href="#">2017 Assembly Election</a>
+                   
+                      
+                      <a class="dropdown-item" href="#">2012 Assembly Election</a>
+                      <a class="dropdown-item" href="#">2007 Assembly Election</a>
+                      </ul>
+                    <!-- </div> -->
+                  <!-- </div> -->
+                   
+                    
+                    <a class="dropdown-item " href="#"  data-toggle="dropdown">Polling Booth List</a>
+                    <div class="dropdown-menu dropdown-menu-end fade-down" style="background-color: #DEEAFF;display: none;">
+                        <a class="dropdown-item" href="#">Assam</a>
+                    </div>
+                   <!-- <a class="dropdown-item" href="#">Polling Booth List</a> -->
+            </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'blog' %}"><span class="text-uppercase">Blog</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}"><span class="text-uppercase">Contact Us</span></a>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+                            </div>
+                        </div> 
+        </div>
+
+    </header>
+
+<!-- navbar end -->
+{% block body %}
+
+	{% endblock body %}
+  <!-- Address start -->
+<section class="skewBox">
+  <div class="container_bg_card">
+       <div class="card foot_card">
+          <div class="card-body">
+            <p>
+              <span><img src="{% static 'assets/images/Vector.svg' %}" class="icon_foot"></span><span>Meet - New Delhi</span><br>
+              <span class="card_add_margin">Meet - Kanpur</span>
+            </p>
+            <p>
+              <span><img src="{% static 'assets/images/Vector (2).svg' %}" class="icon_foot"></span><span>+91-8077930508</span><br>
+              <span class="card_add_margin">+91-9520275040</span>
+            </p>
+            <p>
+              <span><img src="{% static 'assets/images/Vector (1).svg' %}" class="icon_foot"></span><span>info@electioncare.in</span><br>
+              <span class="card_add_margin">sales@electioncare.in</span>
+            </p>
+          </div>
+       </div>
+
+</div>
+</section>
+<!-- Address end -->
+     <!-- Footer start-->
+     <footer class="pt-5">
+        <div class="container">
+          
+          <div class="row no-gutters">
+            <div class="col-12 col-sm-6 col-lg-3">
+              <ul id="foot_list" class="list-unstyled ">
+                <li>
+                  <span class="foot_head">
+                    IT Marketing
+                  </span>
+                  <hr class="footer_hr">
+                 </li>
+                <li>
+                 Digital Marketing
+                </li>
+                <li>
+                 Bulk Sms
+                </li>
+                <li>
+                Voice Call
+                </li>
+                <li>
+                 Ivr Services
+                </li>
+                <li>
+                  Software/Mobile App
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <ul class="list-unstyled">
+                <li>
+                  <span class="foot_head">Bulk SMS</span>
+                  <hr class="footer_hr">
+                 </li>
+                <li>
+                  Promotional Sms
+                </li>
+                <li>
+                  Transitional Sms
+                </li>
+                <li>
+                  Election Sms Campaign
+                </li>
+                <li>
+                  OTP Services
+                </li>
+               
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <ul class="list-unstyled">
+                <li>
+                  <span class="foot_head">Software/Apps</span>
+                  <hr class="footer_hr">
+                 </li>
+                <li>
+                  Website
+                </li>
+                <li>
+                 Janta Darbar Solution
+                </li>
+                <li>
+                  Election Management Software/<br>Mobile App
+                </li>
+                
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <ul class="list-unstyled">
+                <li>
+                  <span class="foot_head">Contact Us</span>
+                  <hr class="footer_hr">
+                 </li>
+                <li>
+                  <a href="">
+                    <img src="{% static 'assets/images/aus.jpg' %}" alt="" width="50px">
+                  </a> 
+                  <button type="button"  class="collapsible">AUSTRALIA </button>
+                  <!-- <span>AUSTRALIA</span> &nbsp;<span class="arrow_img" data-target="#address"
+                    data-toggle="collapse">
+                    <i aria-hidden="true" class="fa fa-chevron-up australia"></i></span> -->
+                    <div class="content" style="color:#1863a6;">
+                    <!-- <div class="collapse" id="address"> -->
+                    <span class="add_txt">102 Hampden Rd,</span><br>
+                    <span class="add_txt">South Wentworthville NSW 2145,</span><br>
+                    <span class="add_txt"> Australia,</span><br>
+                    <span class="add_txt">Phone:+61 416 452 786,</span><br>
+                    <span class="add_txt">Email: seles@cyberflax.com </span>
+                  <!-- </div> -->
+                  </div>
+                </li>
+                
+                <li>
+                  <a href="">
+                    <img src="{% static 'assets/images/india.png' %}" alt="" width="50px">
+                  </a>
+                  <!-- <span>INDIA</span> &nbsp;<span class="arrow_img" data-target="#address2"
+                    data-toggle="collapse">
+                    <i aria-hidden="true" class="fa fa-chevron-up india"></i></span> -->
+                    <button type="button"  class="collapsible">INDIA</button>
+                  <!-- <div class=" collapse" id="address2"> -->
+                    <div class="content">
+                    <span class="add_txt"> 407, </span><br>
+                    <span class="add_txt">Sai Kesava Towers Shilpa Park Kondapur,</span><br>
+                    <span class="add_txt">HITEC City, Hyderabad,</span><br>
+                    <span class="add_txt"> Telangana 500084</span><br>
+                    <span class="add_txt">Phone:+91- 958-483-9976,</span><br>
+                    <span class="add_txt">Email: sales@cyberflax.com </span>
+                  </div>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="{% static 'assets/images/uae.png' %}" alt="" width="50px">
+                  </a>
+                  <!-- <span>UAE</span> &nbsp;<span class="arrow_img" data-target="#address3"
+                    data-toggle="collapse">
+                    <i aria-hidden="true" class="fa fa-chevron-up uae"></i></span> -->
+                    <button type="button"  class="collapsible">UAE</button>
+                  <!-- <div class=" collapse" id="address3"> -->
+                    <div class="content">
+                    <span class="add_txt">Discovery Gardens,</span><br>
+                    <span class="add_txt">Near Ibn Battuta mall,</span><br>
+                    <span class="add_txt"> Dubai 500001,</span><br>
+                  
+                    <span class="add_txt">Phone:+971-50728569,</span><br>
+                    <span class="add_txt">Email: sales@cyberflax.com </span>
+                  </div>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="{% static 'assets/images/us.jpg' %}" alt="" width="50px">
+                  </a>
+                  <!-- <span>USA</span> &nbsp;<span class="arrow_img" data-target="#address4"
+                    data-toggle="collapse">
+                    <i aria-hidden="true" class="fa fa-chevron-up usa"></i></span> -->
+                    <button type="button"  class="collapsible">US</button>
+                  <!-- <div class=" collapse" id="address4"> -->
+                    <div class="content">
+                    <span class="add_txt">Rosemary Ave,Suite 204-118,</span><br>
+                    <span class="add_txt">West Palm Beach,</span><br>
+                    <span class="add_txt">US Florida 33401,</span><br>
+                    <span class="add_txt">Phone:+91 9584839976,</span><br>
+                    <span class="add_txt">Email: sales@cyberflax.com </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          <div class="row no-gutters mt-4 mb-2">
+            <div class="col-12 col-md-6">
+              <p>All Rights Reserved © 2016 - 2021 by Election Care</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <p><a href="{% url 'index' %}">Home</a> | <a href="{% url 'aboutus' %}">About Us</a> | <a href="#">Contact Us</a> | <a href="#">Blog</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+            </div>
+          </div>
+        </div>
+     </footer>
+   <!-- Footer end -->
+    <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> -->
+<!-- <script type="text/javascript">
+  $(document).ready(function() {
+      $(".dropdown, .btn-group").hover(function() {
+          var dropdownMenu = 
+              $(this).children(".dropdown-menu");
+          if (dropdownMenu.is(":visible")) {
+              dropdownMenu.parent().toggleClass("open");
+          }
+      });
+  });
+  
+</script> -->
+<!-- <script>
+  function myFunction() {
+    document.getElementById("address").classList.toggle("show");
+  }
+  
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script> -->
+  <!-- <script type="text/javascript">
+  var dropdown = document.getElementsByClassName("sub-dropdown");
+  var attribute;
+  var myFunction = function() {
+    attribute = this.getAttribute("data-target");
+    var x = document.getElementById(attribute);
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  
+  };
+  for (var i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener('click', myFunction, false);
+  }
+  </script> -->
+  
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      </script>
+      <script>
+        function openForm() {
+          document.getElementById("popupForm").style.display = "block";
+        }
+        function closeForm() {
+          document.getElementById("popupForm").style.display = "none";
+        }
+  window.onclick = function (event) {
+    let modal = document.getElementById('popupForm');
+    if (event.target == modal) {
+      closeForm();
+    }
+  }
+      </script>
+      
+</body>
+
+</html>

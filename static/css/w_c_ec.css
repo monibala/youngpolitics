@@ -1,0 +1,77 @@
+.img_head_container{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.why_ec{
+    margin:2em 1em;
+    /* background: rgba(217, 217, 217, 0.35); */
+    background-color: #F5F5F5;
+border-radius: 17px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+/* text-align: center; */
+}
+
+.why_ec h2 span{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 30.08px;
+/* line-height: 129.47%; */
+/* or 39px */
+line-height:30px;
+letter-spacing: 0.085em;
+
+color: #2A5BBA;
+}
+.why_ec h2 #wc_ec_head{
+  background-image: linear-gradient(to bottom ,rgb(245, 245, 245) 50%, rgba(195,215,255,1) 100% );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom left ;
+}
+.why_ec .wc_ec_text .card{
+    background-color: transparent;
+    border:none;
+    padding:4em 2em;
+}
+.why_ec .wc_ec_text .ec_post{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 23.52px;
+line-height: 145.97%;
+/* or 34px */
+
+text-align: center;
+letter-spacing: 0.085em;
+
+color: #000000;
+}
+
+/* ============================address section ============================== */
+.foot_card{
+     background: #366CD6;
+     width:32em;
+  }
+  .icon_foot{
+      padding:.5em .8em;
+  }
+  
+  .card_add_margin{
+      margin-left: 2.8em;
+
+  }
+  
+  .skewBox{
+      background:#edff57;
+      background: linear-gradient(170deg, #F5F5F5 50%, rgb(0, 41, 64) 50%);
+    	margin-top:-3em;	
+        padding-top:5em;		
+  }
+  .container_bg_card{
+      padding:0em 6em;
+      
+  }

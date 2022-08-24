@@ -1,0 +1,58 @@
+{% extends 'basic.html' %} 
+{% block body %} 
+{% load static %} 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .fa {
+      padding: 2px;
+      font-size: 50px;
+      width: 70px;
+      /* height:15px; */
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      margin-top: 100px;
+      margin-left: 80px;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+</style>
+<section class="about_us pb-5">
+    <h2 id="about_heading"><span>Twitter Marketing Services</span>
+        <div class="img_head_container">
+                <img src="static/assets/images/Vector 2.svg" id="vc_2_img" alt="">
+                <img src="static/assets/images/Vector 3.svg" id="vc_3_img" alt="">
+            </div>
+    </h2>
+    <div class="about_us" style="text-align:justify; margin-left:700px;">
+       <!-- <p class="about_para1">
+           IF YOU ARE PREPARING FOR THE ELECTION, THEN STOP IT
+       </p> -->
+       
+       <!-- <p class="about_para2">
+        
+       </p> -->
+       <!-- <p class="about_para1"> -->
+         <li>Twitter Profile Management</li>
+         <li>Content Optimization</li>
+         <li>Boosting Engagements</li>
+         <li>Twitter Paid Campaigns</li>
+         <li>Lead Generation</li>
+         <li>B2B Marketing</li>
+         <li>B2C Marketing</li>
+         <li>Brand Awareness Campaigns</li>
+       <!-- </p> -->
+      <div class="row">
+       <a href="https://twitter.com/" class="fa fa-twitter"></a>
+       </div>
+    </div>
+  
+</section>
+
+{% endblock %}

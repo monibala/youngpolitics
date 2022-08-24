@@ -1,0 +1,39 @@
+{% include 'admin_base.html' %}
+{% block body %}   
+{% load static %} 
+<div id="page-wrapper">
+    <div id="page-inner">
+       
+        <div class="col-md-4 col-sm-4">
+            <!-- {% for d in blgdata %} -->
+            <div class="panel panel-default">
+              
+                    <img src="/media/{{d.bimage}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <!-- <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                  </div></a>
+                <div class="panel-body">
+                  <a href="">
+                            
+                                <h4 class="card-title">{{d.bname}}</h4></a>
+                    <p>{{d.description|safe|capfirst|slice:':100'}}...</p>
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-primary "
+                     onclick="$('#pid').val('{{d.id}}');"
+                      data-toggle="modal" data-target="#edit">
+                       Edit
+                      </button><button style="float: right;background-color: rgb(221, 47, 47);" 
+                      class="btn btn-primary " onclick="$('#prid').val('{{d.id}}');" data-toggle="modal" data-target="#delete">
+                       Delete
+                      </button>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+       
+{% endblock %}

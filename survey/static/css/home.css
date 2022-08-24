@@ -1,0 +1,741 @@
+/* body{
+    /* background-color: #D1E0FF; */
+   /* background-color: #FFF;
+} */
+
+/*top social links nav*/
+.img_head_container{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.header_top_contain img{
+  padding:.2em 0em;
+  margin:0em .4em;
+  /* height:1.125em;
+  width:1.125em; */
+}
+
+#nav_logo{
+  font-family: 'Tienne', serif;
+font-style: normal;
+font-weight: 700;
+font-size: 30.77px;
+line-height: 34px;
+text-align: left;
+color: #FFFFFF;
+}
+#navbar_top{
+  background-color: #002940;
+}
+.nav-link{
+  font-family: 'Poppins' sans-serif;;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 111.47%;
+text-align: center;
+letter-spacing: 0.035em;
+color: #D7D7D7;
+}
+
+.in_contact{
+  display:inline-block;
+  padding:0 .2em 0em .4em;
+}
+.in_contact img{
+  padding:0 .4em;
+}
+.in_contact a,span{
+  text-decoration: none;
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height:111.47%;
+/* identical to box height, or 15px */
+
+letter-spacing: 0.035em;
+
+color: #FFFFFF;
+}
+.in_contact a:hover,span:hover{
+  text-decoration: underline;
+  
+}
+.btn_enq{
+  margin-top: .2em;
+  margin-right: -15px;
+  text-align: end;
+}
+#enq{
+  padding:.3em 1.5em;
+  background-color: #BF1238;
+  margin-right: 0;
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 111.47%;
+text-align: center;
+
+color: #FFFFFF;
+}
+.nav-center_class{
+    margin-top:-.2em;
+}
+.nav-bottom_class{
+   margin-top:-2em;
+   margin-bottom:0em; 
+   padding-bottom:0;
+}
+@media screen and (max-width:992px) {
+
+    .in_contact{
+  display:block;
+  padding:0 .2em 0em .4em;
+}
+.btn_enq{
+  margin-top: .5em;
+  margin-bottom: .5em;
+  margin-left: .5em;
+  text-align: left;
+}
+}
+@media screen and (max-width:756px) {
+.nav-center_class{
+margin-top:.5em;
+margin-bottom: .5em;
+}
+.nav-bottom_class{
+    margin-top: .2em;
+}
+}
+
+/*================================= Footer section styles ================================= */
+/*footer*/
+footer{
+      background: #002940;
+  }
+    #foot_list{
+        padding-left:0px ;
+        margin-left:0px ;
+        text-align:left;
+    }
+    footer ul li{
+    color:#fff;
+    font-size:16px;
+    font-weight:400;
+    line-height:27.2px;
+    margin-left:0;
+    
+    }
+  footer ul li .foot_head{
+      font-size:20px; 
+      font-weight:600;
+     
+  }
+  .footer_hr{
+    text-align:left;
+    width:30%;
+   border:1px solid #fff;
+    background-color:#fff;
+     margin-left: 0;
+     margin-top: 4px;
+  }
+  
+  footer p{
+      font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 14.08px;
+line-height: 166.97%;
+/* or 20px */
+
+letter-spacing: 0.085em;
+color:#fff;
+/* color: rgba(229, 229, 229, 0.7); */
+
+  }
+footer p a{
+    
+   color:#fff;
+   text-decoration: none;
+/* color: rgba(229, 229, 229, 0.7); */
+
+  }
+  footer p a:hover{
+    
+   color:#fff;
+   text-decoration:underline;
+/* color: rgba(229, 229, 229, 0.7); */
+
+  }
+
+  /* =============================================History change section ================================= */
+ .ech{
+   margin:3em 2em;
+ }
+ .ech .img_content{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+  
+ }
+ .ech #img_1ech{
+   margin-top: 3em;
+ }
+ .ech .content h4{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 23.08px;
+line-height: 111.47%;
+/* identical to box height, or 26px */
+
+letter-spacing: 0.085em;
+
+color: #2A5BBA;
+ }
+ .ech .content p{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 19.08px;
+line-height: 129.47%;
+/* or 25px */
+
+letter-spacing: 0.085em;
+
+color: #000000;
+ }
+
+ /*========================================Our Capabilities section =======================================*/
+  .our_cap{
+   margin:3em 2em;
+ }
+ .our_cap .oc_head h3{
+   text-align: center;
+ }
+ .our_cap .oc_head h3 span{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 30.08px;
+line-height: 129.47%;
+/* identical to box height, or 39px */
+
+letter-spacing: 0.085em;
+
+color: #2A5BBA;
+ }
+.our_cap .oc_head h3 #oc_hehad_cap{
+  background-image: linear-gradient(to bottom ,rgba(255,255,255,1) 50%, rgba(195,215,255,1) 100% );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom left ;
+}
+.our_cap .oc_head h3 span:hover{
+    text-decoration: none;
+}
+.card-container{
+    display: flex;
+    flex-direction: row;
+    
+    /* justify-content: center; */
+    /* align-items: center; */
+
+}
+.card-container .card-img-container{
+    display:flex;
+    width: 60px;
+    height: 60px;
+    padding:0 11px;
+    border-radius: 50%; 
+    justify-content: center;
+    align-items: center;
+}
+.card-container .card-content .card_head{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 24.08px;
+line-height: 129.47%;
+/* or 31px */
+
+letter-spacing: 0.085em;
+}
+
+.card-container .card-content{
+    margin: 0  2em 0 2em;
+}
+
+.card-container .card-content p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18.08px;
+line-height: 148.97%;
+/* or 27px */
+
+letter-spacing: 0.085em;
+
+color: #3E3E3E;
+}
+/* card1 */
+.card-container #card-img-container1{
+    background-color: #FFA7A7;
+}
+.card-container .card-content #card1_head{
+   color: #B41515;
+}
+/* card 2 */
+.card-container #card-img-container2{
+    background-color: #FFEE97;  
+}
+.card-container .card-content #card2_head{
+   color: #AA8F00;
+}
+
+/* card 3 */
+.card-container #card-img-container3{
+    background-color: #ACEBBE;  
+}
+.card-container .card-content #card3_head{
+color: #007020;
+}
+
+/* card 4 */
+.card-container #card-img-container4{
+    background-color: #FDAFFF;   
+    padding:0 15px;
+}
+.card-container .card-content #card4_head{
+color: #AF03B2;
+}
+/* card 5 */
+.card-container #card-img-container5{
+    background-color: #A1DDFF;
+    padding:0 15px;
+}
+.card-container .card-content #card5_head{
+color: #007020;
+}
+
+/* card 6 */
+.card-container #card-img-container6{
+    background-color: #FFC09C;
+    width: 61px;
+    height: 61px;
+    padding:0 21px;
+}
+.card-container .card-content #card6_head{
+ color: #9A3700;
+}
+
+/*========================fancy border line start================================================== */
+.fancy-border {
+  width: 100%;
+  height: auto;
+  text-align:left;
+  border-top: 10px solid;
+  border-image:   linear-gradient(to right, #FB8181 20%, #6CE08D 20%, #6CE08D 40%,#558FFF 40%, #558FFF 60%, #F4D73C 60%,#F4D73C 80%,#E23DE6 80%) 5;
+  background-color: #D1E0FF;
+  -ms-transform: skewY(4deg); /* IE 9 */
+  transform: skewY(4deg);
+  margin:4em 0em;
+}
+.my-content{
+    -ms-transform: skewY(-4deg); /* IE 9 */
+  transform: skewY(-4deg);
+}
+.fancy_border_content{
+    padding:4em 0em;
+}
+.fancy_border_content h3 #ecs_head{
+ background-image: linear-gradient(to bottom ,#D1E0FF 50%, rgba(195,215,255,1) 100% );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom left ;
+}
+.fancy_border_content h3 span{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 30.08px;
+line-height: 129.47%;
+/* or 39px */
+
+letter-spacing: 0.085em;
+
+color: #2A5BBA;
+
+}
+.fancy_border_content p{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 21.08px;
+line-height: 129.47%;
+/* or 27px */
+
+letter-spacing: 0.085em;
+
+color: #000000;
+}
+.img-container-fancy{
+    display:flex;
+    margin-top:-24px;
+   
+    justify-content: center;
+    align-items: center;
+    height:90%;
+    width:80%;
+    background-color: #3572E8;
+    border-radius: 0 0 50% 50%;
+    -ms-transform: skewY(4deg); /* IE 9 */
+  transform: skewY(4deg);
+}
+.img-container-fancy img{
+    /* width:499px;
+    height:277px; */
+    max-width: 80%;
+    height:auto;
+-ms-transform: skewY(-4deg); /* IE 9 */
+  transform: skewY(-4deg);
+}
+
+@media  screen and (max-width:992px) {
+    .img-container-fancy{
+    margin-top:0em;
+    width:100%;
+    max-width: 100%;
+    padding: 2em 0em;
+    background-color: #3572E8;
+    border-radius: 10px;
+    /* -ms-transform: skewY(-4deg); 
+  transform: skewY(-4deg); */
+}
+.img-container-fancy img{
+    /* width:499px;
+    height:277px; */
+    max-height:100%;
+    width:auto;
+   /* -ms-transform: skewY(4deg);
+  transform: skewY(4deg); */
+}
+}
+
+/*================= Election care Serve Also==================================== */
+.elec_serve_also{
+    padding:2em 0em;
+    text-align: center;
+}
+.elec_serve_also h3 #esa_head{
+  background-image: linear-gradient(to bottom ,rgba(255,255,255,1) 50%, rgba(195,215,255,1) 100% );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom left ;
+}
+.elec_serve_also h3 span{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 30.08px;
+line-height: 129.47%;
+/* or 39px */
+
+letter-spacing: 0.085em;
+text-align: center;
+color: #2A5BBA;
+}
+.elec_serve_also .ecsa_container .esa_btn{
+    padding:.5em 1.5em;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #719BEC;
+    margin:1em 2em;
+    border-radius: 10px;
+}
+.elec_serve_also .ecsa_container a{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20.08px;
+line-height: 129.47%;
+/* identical to box height, or 26px */
+letter-spacing: 0.085em;
+color: #FFFFFF;
+}
+
+
+.ecsa_container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding:0em 2em;
+    justify-content: center;
+}
+/*========================pcnp section ================================================== */
+.pcnp {
+  width: 100%;
+  height: auto;
+  text-align:left;
+  border-top: 10px solid;
+  border-image:   linear-gradient(to right, #E23DE6 20%, #F4D73C 20%, #F4D73C 40%,#558FFF 40%, #558FFF 60%, #6CE08D 60%,#6CE08D 80%,#FB8181 80%) 5;
+  background-color: #D1E0FF;
+  -ms-transform: skewY(-4deg); /* IE 9 */
+  transform: skewY(-4deg);
+  margin:4em 0em 0em;
+  padding-bottom: 4em;
+}
+.my-content_pcnp{
+    -ms-transform: skewY(4deg); /* IE 9 */
+  transform: skewY(4deg);
+}
+.pcnp_content{
+    padding:4em 0em;
+}
+.pcnp_content h3 #pcnp_head{
+ background-image: linear-gradient(to bottom ,#D1E0FF 50%, rgba(195,215,255,1) 100% );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom left ;
+}
+.pcnp_content h3 span{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 30.08px;
+line-height: 129.47%;
+/* or 39px */
+
+letter-spacing: 0.085em;
+
+color: #2A5BBA;
+
+}
+.pcnp_content p{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 21.08px;
+line-height: 129.47%;
+/* or 27px */
+
+letter-spacing: 0.085em;
+
+color: #000000;
+}
+.img-container-pcnp{
+    display:flex;
+    margin-top:-19px;
+   
+    justify-content: center;
+    align-items: center;
+    height:90%;
+    width:80%;
+    background-color: #3572E8;
+    border-radius: 0 0 50% 50%;
+    -ms-transform: skewY(-4deg); /* IE 9 */
+  transform: skewY(-4deg);
+}
+.img-container-pcnp img{
+    /* width:499px;
+    height:277px; */
+    max-width:80%;
+    height:auto;
+-ms-transform: skewY(4deg); /* IE 9 */
+  transform: skewY(4deg);
+}
+@media  screen and (max-width:992px) {
+    .img-container-pcnp{
+    margin-top:-1px;
+    width:100%;
+    max-width: 100%;
+    padding: 2em 0em;
+    background-color: #3572E8;
+    border-radius: 10px;
+    /* -ms-transform: skewY(-4deg); 
+  transform: skewY(-4deg); */
+}
+.img-container-pcnp img{
+    /* width:499px;
+    height:277px; */
+    max-height:100%;
+    width:auto;
+   /* -ms-transform: skewY(4deg);
+  transform: skewY(4deg); */
+}
+}
+
+/*================================================Address section==========================================================*/
+.foot_card{
+     background: #366CD6;
+     width:32em;
+  }
+  .icon_foot{
+      padding:.5em .8em;
+  }
+  
+  .card_add_margin{
+      margin-left: 2.8em;
+
+  }
+  
+  .skewBox{
+      background:#edff57;
+      background: linear-gradient(170deg, rgb(209, 224, 255) 50%, rgb(0, 41, 64) 50%);
+    	margin-top:-4em;			
+  }
+  .container_bg_card{
+      padding:0em 6em;
+      
+  }
+
+   /*=======================================================Political Survey banner=============================================*/
+  .politic_survey_banner{
+    margin:1em 2em;
+    background-color: #DEEAFF;
+    padding:0;
+    border-bottom-left-radius: 2em;
+    /* width: 90vw;  */
+  }
+  .politic_survey_banner .surv_card{
+    padding-left: 1em;
+  }
+  .politic_survey_banner .surv_card h3{
+      font-family: 'Poppins';
+       font-style: normal;
+       font-weight: 700;
+      font-size: 26.6883px;
+       line-height: 123%;
+       /* or 33px */
+
+       letter-spacing: 0.085em;
+
+       color: #002940;
+
+  }
+ .politic_survey_banner .surv_card h5{
+       font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16.69px;
+    line-height: 123%;
+    /* or 21px */
+
+    letter-spacing: 0.085em;
+
+    color: #515151;
+ } 
+
+ .politic_survey_banner .surv_card p{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 12.69px;
+line-height: 123%;
+/* or 16px */
+
+letter-spacing: 0.085em;
+
+color: #000000;
+ }
+
+ .politic_survey_banner .surv_card a{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 15.69px;
+line-height: 123%;
+/* or 19px */
+text-decoration: none;
+letter-spacing: 0.085em;
+margin:0em .5em;
+ }
+  .politic_survey_banner .surv_card #srv_btn1{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #3572E8;
+    border-radius: 11px;
+    color:#FFFFFF;
+    padding:1em 2em;
+    margin:1em 1em;
+ }
+  .politic_survey_banner .surv_card #srv_btn2 {
+    background: #D5E3FF;
+    border: 2px solid #2A5BBA;
+    color:#2A5BBA;
+    border-radius: 11px;
+    padding:1em 2em;
+    margin:1em 1em;
+ }
+  .politic_survey_banner .surv_card #srv_btn1:hover{
+    background-color: #D5E3FF;
+    color:#2A5BBA;
+ }
+  .politic_survey_banner .surv_card #srv_btn2:hover{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #3572E8;
+    color:#FFFFFF;
+ }
+.politic_survey_banner .surv_card .survey_buttons{
+  display:flex;
+  flex-wrap: wrap;
+  margin:3em 1.5em;
+}
+ .politic_survey_banner .surv_card .check_txt{
+   margin:2em 1em;
+ }
+ .politic_survey_banner .surv_card .check_txt span{
+   margin:1em .4em;
+   font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 12.69px;
+line-height: 123%;
+/* identical to box height, or 16px */
+
+letter-spacing: 0.095em;
+
+color: #000000;
+
+ }
+
+ .politic_survey_banner .img_contain{
+     position: relative;
+   width: 100%;
+  /* height: 100%; */
+ 
+
+ }
+ #img1_surv{
+   position:absolute;
+   top:0em;
+   right:.8em;
+  max-width: 100%;
+  /* width:auto; */
+ }
+ #img2_surv{
+   position:relative;
+   /* top:5.6em; */
+   left:0px;
+   top:54%;
+   bottom:0px;
+  max-width: 100%;
+  max-height:100%
+  /* border-radius:12%; */
+ 
+ }
+ #last_surv_sec{
+   font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 17px;
+line-height: 123%;
+/* or 24px */
+
+letter-spacing: 0.085em;
+background: #002940;
+color:#FFF;
+padding: 1em 0.8em;
+margin-bottom: 0px;
+border-bottom-left-radius: 2em;
+ }
+

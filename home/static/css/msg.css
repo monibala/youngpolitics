@@ -1,0 +1,142 @@
+.img_head_container{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.img_head_container_rev{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.img_head_container_rev img{
+    transform: rotate(-180deg);
+}
+.msgs{
+     margin:2em 1em;
+    background-color: #F5F5F5;
+border-radius: 17px;
+text-align: center;
+}
+.msgs .msg_out_container{
+       margin:2em 1em;
+    background-color: #F5F5F5;
+border-radius: 17px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: center;
+/* align-items: center; */
+text-align: center;
+}
+.msgs #msg_heading{
+    align-items: center;
+    text-align: center;
+    margin: 2em 0em;
+}
+.msgs #msg_heading span{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 30.08px;
+line-height: 129.47%;
+/* identical to box height, or 39px */
+
+letter-spacing: 0.085em;
+
+color: #2A5BBA;
+}
+.msgs #msg_heading span{
+     background-image: linear-gradient(to bottom ,rgb(245, 245, 245) 50%, rgba(195,215,255,1) 100% );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom left ;
+}
+.msgs .msg_container{
+   /* display:flex;
+   flex-wrap: wrap;
+   justify-content: center; 
+   align-items: center; */
+   margin:1em 5em;
+   background-color: transparent;
+   border: none;
+   width:388px;
+}
+.msg_container .msg_para{
+
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 18.8235px;
+line-height: 150.47%;
+/* or 28px */
+text-align: center;
+letter-spacing: 0.085em;
+padding:2em 1em;
+color: #000000;
+border:2px solid #000;
+border-radius: 13px;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), rgba(147, 201, 255, 0.51);
+}
+.msg_container .msg_para {
+  position: relative;
+  /* width: 200px; height: 100px; */
+margin:0 0 4em;
+}
+.msg_container .msg_para img{
+  position: absolute;
+  left: 50%; bottom: 0;
+  width: 106px; 
+  height: 106px; 
+  margin:-50px;
+  border-radius: 50%;
+}
+
+.msg_container .person_name{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 20.8619px;
+line-height: 129.47%;
+/* identical to box height, or 27px */
+letter-spacing: 0.085em;
+color: #000000;
+text-align: center;
+display:block;
+}
+.msg_container .person_post{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 15.8299px;
+line-height: 129.47%;
+/* or 20px */
+text-align: center;
+letter-spacing: 0.085em;
+color: #2E2E2E;
+display:block;
+}
+
+/* ============================address section ============================== */
+.foot_card{
+     background: #366CD6;
+     width:32em;
+  }
+  .icon_foot{
+      padding:.5em .8em;
+  }
+  
+  .card_add_margin{
+      margin-left: 2.8em;
+
+  }
+  
+  .skewBox{
+      background:#edff57;
+      background: linear-gradient(170deg,#F5F5F5 50%, rgb(0, 41, 64) 50%);
+    	margin-top:-3em;	
+        padding-top:5em;		
+  }
+  .container_bg_card{
+      padding:0em 6em;
+      
+  }

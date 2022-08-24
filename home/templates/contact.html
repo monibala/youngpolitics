@@ -1,0 +1,88 @@
+{% extends 'basic.html' %}
+{% block body %}
+{% load static %}
+    <section class="contacts">
+        <h2 id="contact_heading"><span class="contact_head_text">Contact Us</span>
+            <div class="img_head_container">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="">
+                <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="">
+            </div>
+        </h2>
+        <div class="container-fluid contact-container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="text-container-contact">
+                        <h3>Enquire With Us</h3>
+                        <p>For more information</p>
+                    </div>
+                    <div class="img_des1_cont d-none d-md-block">
+                        <div class="vc_4_5_cont">
+                            <img src="{% static 'assets/images/Vector 4.svg' %}" id="vc_4_img" alt="">
+                            <img src="{% static 'assets/images/Vector 5.svg' %}" id="vc_5_img" alt="">
+                        </div>
+                        
+                    <div class="vc_82_92_container d-none d-md-block">
+                        <img src="{% static 'assets/images/Vector 9 (2).svg' %}" id="vc_92_img" alt="">
+                        <img src="{% static 'assets/images/Vector 8 (2).svg' %}" id="vc_82_img" alt="">
+                    </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="col-12 col-md-6 col-lg-5">
+                    <form action="" method="POST">
+                      {% csrf_token %}
+                      <div class="form-group">
+                          <div class="row">
+                        <div class="col">
+                          <label for="name"> Name</label>
+                          <input type="text" id="name" name="name" class="form-control" >
+                        </div>
+                        <!-- <div class="col">
+                          <label for="lname">Last Name</label>
+                          <input type="text" id="lastNameInput" name="lname" class="form-control">
+                        </div> -->
+                      </div>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="inputEmail" name="email" class="form-control" >
+                      </div>
+                      <div class="form-group">
+                        <label for="number">Number</label>
+                        <input type="tel" id="inputNumber" name="number" class="form-control"  >
+                      </div>
+                      <div class="form-group">
+                        <label for="service">Select a service</label>
+                        <select class="form-control" id="serviceSelect" name="service">
+                          <option>Digital Marketing</option>
+                          <option>UI Development</option>
+                          <option>Marketing</option>
+                          <option>Lorem ipsum</option>
+                          <option>Lorem ipsum</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="comment">Comment or Message</label>
+                        <textarea class="form-control" id="comment" name="comment" rows="4"></textarea>
+                      </div>
+                      <button type="submit" class="btn">SUBMIT</button>
+                    </form>
+                </div>
+                <div class="d-none d-lg-block col-lg-3">
+                    <div class="img_des_container">
+                        <div class="vc_6_7_container">
+                            <img src="{% static 'assets/images/Vector 6.svg' %}" id="vc_6_img" alt="">
+                            <img src="{% static 'assets/images/Vector 7.svg' %}" id="vc_7_img" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/images/Vector 9.svg' %}" id="vc_8_img" alt="">
+                        <img src="{% static 'assets/images/Vector 8.svg' %}" id="vc_9_img" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   {% endblock %}

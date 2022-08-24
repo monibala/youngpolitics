@@ -1,0 +1,60 @@
+{% include 'admin_base.html' %} 
+
+{% block body %} 
+{% load static %} 
+<div class="row">
+    
+    <div class="col-md-6 col-sm-12 col-xs-12" style="width:100%; height:100%;">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+            
+                 <h2 style="margin-left:600px;"> Add Results </h2>
+                </div>
+            <div class="panel-body">
+               
+
+            <form action=" " method="POST" style="margin-left: 350px;">
+            {% csrf_token %}
+            <div class="row">
+            <div class="col-sm-3">
+                <h6 class="mb-0"> Year</h6>
+            </div>
+            <input type="number" name="year" value=" "/>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+        <h6 class="mb-0"> Party</h6>
+      </div>
+      <div class="col-sm-9 text-secondary">
+        <input type="text" name="party" value=" "/>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Seats</h6>
+      </div>
+      <div class="col-sm-9 text-secondary">
+          
+        <input type="number" name="seats" value=" "/>
+        
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-3">
+          <h6 class="mb-0">Vote%</h6>
+        </div>
+        <div class="col-sm-9 text-secondary">
+          <input type="number" name="vote" value=""/>
+        
+        </div>
+      </div>
+      <button type="submit" class="btn-btn-primary">ADD</button>
+    </div>
+</div>
+</div>
+</div>
+
+{% endblock %}

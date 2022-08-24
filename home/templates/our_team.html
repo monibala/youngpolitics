@@ -1,0 +1,170 @@
+{% extends 'basic.html' %}
+{% block body %}
+{% load static %}
+<!-- Our team section start -->
+<section class="team_members ">
+    
+        <h2><span >Our Team</span>
+           <div class="img_head_container">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="">
+                <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="">
+            </div>
+        </h2>
+       
+ <div class="team" >
+     <!-- member1 -->
+     {% for i in team_data %}
+    <div class="card text-center">
+        {% if i.images %}
+        <div class="member_img">
+            <img class="card-img" src="/media/{{i.images}}" alt="">
+           
+        </div>
+        {% endif %}
+        <div class="card-body">
+            <h3 class="member_name">
+                <div class="img_head_container_rev">
+                <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="" width=10px; height=10px; style="margin:0px; padding:0px;">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="" width=10px; height=10px; style="margin:0px; padding:0px;">
+            </div>
+         <span>{{i.name}}</span>
+          <div class="img_head_container">
+               <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="" width=10px; height=10px; style="margin:-9px; padding:0px;">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="" width=10px; height=10px; style="margin:-9px; padding:0px;">
+                
+            </div>
+                
+            </h3>
+            <p class="post">
+               <span>{{i.designation}}</span>
+            </p>
+        </div>
+       
+    </div>
+    <!-- member2 -->
+    <!-- <div class="card text-center">
+        <div class="member_img2">
+          <img class="card-img" src="{% static 'assets/images/member2.png' %}" alt="">  
+        </div>
+        <div class="card-body">
+            <h3 class="member_name">
+                <div class="img_head_container_rev">
+                <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="" width=10px; height=10px; style="margin:0px; padding:0px;">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="" width=10px; height=10px; style="margin:0px; padding:0px;">
+            </div>
+         <span>Easter Howard</span>
+          <div class="img_head_container">
+               <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="" width=10px; height=10px; style="margin:-9px; padding:0px;">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="" width=10px; height=10px; style="margin:-9px; padding:0px;">
+                
+            </div>
+                
+            </h3>
+            <p class="post">
+               <span>Manager</span>
+            </p>
+        </div>
+    </div> -->
+    <!-- member3 -->
+    <!-- <div class="card text-center">
+        <div class="member_img3">  
+          <img class="card-img" src="{% static 'assets/images/member3.png' %}" alt="">
+        </div>
+        <div class="card-body">
+            <h3 class="member_name">
+                <div class="img_head_container_rev">
+                <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="" width=10px; height=10px; style="margin:0px; padding:0px;">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="" width=10px; height=10px; style="margin:0px; padding:0px;">
+            </div>
+         <span>Easter Howard</span>
+          <div class="img_head_container">
+               <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="" width=10px; height=10px; style="margin:-9px; padding:0px;">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="" width=10px; height=10px; style="margin:-9px; padding:0px;">
+                
+            </div>
+                
+            </h3>
+            <p class="post">
+               <span>Manager</span>
+            </p>
+        </div>
+    </div> -->
+    <!-- member4 -->
+    <!-- <div class="card text-center">
+        <div class="member_img4"> 
+          <img class="card-img" src="{% static 'assets/images/member4.png' %}" alt=""> 
+        </div>
+        <div class="card-body">
+            <h3 class="member_name">
+                <div class="img_head_container_rev">
+                <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="" width=10px; height=10px; style="margin:0px; padding:0px;">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="" width=10px; height=10px; style="margin:0px; padding:0px;">
+            </div>
+         <span>Easter Howard</span>
+          <div class="img_head_container">
+               <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="" width=10px; height=10px; style="margin:-9px; padding:0px;">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="" width=10px; height=10px; style="margin:-9px; padding:0px;">
+                
+            </div>
+                
+            </h3>
+            <p class="post">
+               <span>Manager</span>
+            </p>
+        </div>
+    </div> -->
+    <!-- member5 -->
+    <!-- <div class="card text-center">
+        <div class="member_img5"> 
+          <img class="card-img" src="{% static 'assets/images/member5.png' %}" alt=""> 
+        </div>
+        <div class="card-body">
+            <h3 class="member_name">
+                <div class="img_head_container_rev">
+                <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="" width=10px; height=10px; style="margin:0px; padding:0px;">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="" width=10px; height=10px; style="margin:0px; padding:0px;">
+            </div>
+         <span>Easter Howard</span>
+          <div class="img_head_container">
+               <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="" width=10px; height=10px; style="margin:-9px; padding:0px;">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="" width=10px; height=10px; style="margin:-9px; padding:0px;">
+                
+            </div>
+                
+            </h3>
+            <p class="post">
+               <span>Manager</span>
+            </p>
+        </div>
+    </div> -->
+    <!-- member6 -->
+    <!-- <div class="card text-center">
+        <div class="member_img6">
+          <img class="card-img" src="{% static 'assets/images/member6.png' %}" alt="">  
+        </div>
+        <div class="card-body">
+            <h3 class="member_name">
+                <div class="img_head_container_rev">
+                <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="" width=10px; height=10px; style="margin:0px; padding:0px;">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="" width=10px; height=10px; style="margin:0px; padding:0px;">
+            </div>
+         <span>Easter Howard</span>
+          <div class="img_head_container">
+               <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="" width=10px; height=10px; style="margin:-9px; padding:0px;">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="" width=10px; height=10px; style="margin:-9px; padding:0px;">
+                
+            </div>
+                
+            </h3>
+            <p class="post">
+               <span>Manager</span>
+            </p>
+        </div>
+    </div> -->
+    {% endfor %}
+ </div>   
+ 
+</section>
+<!-- Our team section end -->
+<!-- Address start -->
+{% endblock %}

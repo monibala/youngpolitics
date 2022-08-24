@@ -1,0 +1,74 @@
+{% extends 'basic.html' %}
+{% block body %}
+{% load static %}
+<style>
+    .hide {
+      display: none;
+    }
+        
+    .wwd_btn:hover + .hide {
+      display: block;
+      width:500px;
+      margin-left:350px;
+      color: grey;
+    }
+    </style>
+<!-- What we do section start -->
+<section class="wwd_sec">
+    <h2 id="wwd_heading"><span class="wwd_head_text">What We Do</span>
+        <div class="img_head_container">
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="">
+                <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="">
+            </div>
+    </h2>
+    <div class="wwd_text">
+       <p class="wwd_para1">
+           We will empower you with all the necessary tools and services in your election. We will urge voters of 
+           your constituency to have a good relationship with you through hard work and election campaign so that your
+            presence and better
+       </p>
+       <p class="care_line"> ELECTIONCARE</p>
+    </div>
+
+    <div class="wwd_form_container ">
+        <h2 id="wwd_heading"><span>How To Election</span>
+           <div class="img_head_container" >
+                <img src="{% static 'assets/images/Vector 2.svg' %}" id="vc_2_img" alt="">
+                <img src="{% static 'assets/images/Vector 3.svg' %}" id="vc_3_img" alt="">
+            </div>
+           <br><span class="wwd_head_text">Win Program</span></h2>
+             <div class="wwd_detail_container pb-5">
+                   <div class="wwd_btns_container" style="margin-left:100px;">
+                       <a class="wwd_btn" style="width:500px;margin-left:450px;" href="#"  alt="">Election Mnagement Services</a>
+                       <div class="hide" style="margin-left:450px;"><img src="static/assets/images/Rectangle 30.svg">Offline management through Survey and Campaign
+                        Online Election Management Through Online Campaign and Social Media platform</div>
+                       <a class="wwd_btn"  style="width:500px;margin-left:450px;" href="#"  alt="">Opinion poll/ Exit poll</a>
+                       <div class="hide"  style="margin-left:450px;"> <img src="static/assets/images/Rectangle 30.svg"> Online Poll,  Paper Poll, Telephone Poll, Mobile App Poll We conduct poll for the candidate 
+                        and given the Feedback</div>
+                       <a class="wwd_btn"  style="width:500px;margin-left:450px;" href="#" alt="">Vote Appeal and Awareness</a>
+                       <div class="hide"  style="margin-left:450px;"><img src="static/assets/images/intro_consult.svg">Facebook Post , Whatsapp , Bulk SMS Service , Voice call Services , Missed call services , Youtube Advertizement</div>
+                       <a class="wwd_btn"  style="width:500px;margin-left:450px;" href="#" alt="">Janta Darwar Solution</a>
+                       <div class="hide"  style="margin-left:450px;"><img src="static/assets/images/Voting-bro 1.svg" alt="">Jataprintidhi (Chairperson , meyar , MLA and MP) works public software for continuous touch of the public.</div>
+                       <a class="wwd_btn"  style="width:500px;margin-left:450px;" href="#" alt="">Digital Media Services</a>
+                       <div class="hide"  style="margin-left:450px;"><img src="static/assets/images/Rectangle 110.png" style="margin-left:90px;">Profile Creation on Social Media Platforms. Update Account Profile with Photo, Vedio and Events Till Date. Daily Updation Public Meeting /Latest New/ Event on Social Media. Voice Message , Feedback and Comments</div>
+                   </div>
+                    <!-- <div class="block_pack" style="width:800px;margin-left:150px;" >
+                     <div class="wwd_block" ></div>
+                     <p class="wwd_details_para" >
+                        Online Poll,  Paper Poll, Telephone Poll, Mobile App Poll We conduct poll for the candidate 
+                         and given the Feedback
+                     </p>
+                    
+                    </div>
+            </div> -->
+    </div>
+</section>
+<!-- What we do section end -->
+<script>
+    $(document).ready(function(){
+      $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+      });
+    });
+    </script>
+{% endblock %}

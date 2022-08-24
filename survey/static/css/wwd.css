@@ -1,0 +1,159 @@
+.img_head_container{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.wwd_sec{
+     margin:2em 1em;
+    background-color: #E5E5E5;
+border-radius: 17px;
+text-align: center;
+}
+.wwd_sec #wwd_heading{
+    align-items: center;
+    text-align: center;
+    margin: 2em 0em;
+}
+.wwd_sec #wwd_heading span{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 30.08px;
+line-height: 129.47%;
+/* identical to box height, or 39px */
+text-transform: capitalize;
+letter-spacing: 0.085em;
+
+color: #2A5BBA;
+}
+.wwd_sec #wwd_heading .wwd_head_text{
+     background-image: linear-gradient(to bottom ,#E5E5E5 50%, rgba(195,215,255,1) 100% );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom left ;
+}
+.wwd_sec .wwd_text{
+    text-align: center;
+    margin: 2em 0em 2em;
+}
+.wwd_sec .wwd_text .wwd_para1{
+ font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 22.08px;
+line-height: 129.47%;
+/* or 29px */
+
+text-align: center;
+letter-spacing: 0.085em;
+
+color: #000000;
+}
+.wwd_sec .wwd_text .care_line{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 16.08px;
+line-height: 129.47%;
+/* identical to box height, or 21px */
+
+text-align: center;
+letter-spacing: 0.085em;
+
+color: #083791;
+}
+
+/*======================================== wwd detail======================================================= */
+.wwd_detail_container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #DBEAF9;
+}
+@media screen and (max-width:1350px) {
+   .wwd_detail_container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #DBEAF9;
+    justify-content: center;
+} 
+}
+.block_pack{
+    margin:2em 0em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wwd_detail_container .block_pack .wwd_block{
+    width: 80%;
+    height: 238px;
+   
+    background: #D9D9D9;
+    border-radius: 9px;
+    margin:1em;
+}
+
+.wwd_detail_container .wwd_details_para{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 17.08px;
+line-height: 129.47%;
+/* or 22px */
+
+letter-spacing: 0.085em;
+margin:1em;
+color: #000000;
+}
+.wwd_btns_container{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    margin:2em 0em;
+    
+}
+.wwd_btn{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 13.08px;
+line-height: 129.47%;
+/* identical to box height, or 17px */
+background: #FFF;
+border-radius: 10px;
+letter-spacing: 0.085em;
+text-decoration: none;
+color: #2A5BBA;
+padding:1em 2em;
+margin:1em;
+}
+.wwd_btn:hover, .wwd_btn:active{
+background: #3572E8;
+color: #FFF;
+text-decoration: none;
+}
+/* ============================address section ============================== */
+.foot_card{
+     background: #366CD6;
+     width:32em;
+  }
+  .icon_foot{
+      padding:.5em .8em;
+  }
+  
+  .card_add_margin{
+      margin-left: 2.8em;
+
+  }
+  
+  .skewBox{
+      background:#edff57;
+      background: linear-gradient(170deg, #E5E5E5 50%, rgb(0, 41, 64) 50%);
+    	margin-top:-2em;	
+        padding-top:5em;		
+  }
+  .container_bg_card{
+      padding:0em 6em;
+      
+  }
