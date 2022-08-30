@@ -1,0 +1,28 @@
+{% extends 'basic.html' %} 
+{% block body %} 
+{% load static %} 
+<section class="about_us pb-5">
+    <!-- <h2 id="about_heading"><span>Polling Booth List</span></h2> -->
+        <img src="{% static 'assets/images/pollvoting.webp' %}"  alt="" style="width:1100px;">
+        <div class="img_head_container">
+                <img src="static/assets/images/Vector 2.svg" id="vc_2_img" alt="">
+                <img src="static/assets/images/Vector 3.svg" id="vc_3_img" alt="">
+            </div>
+  
+    <div class="about_text">
+       <p class="about_para1">
+          
+       </p>
+      
+       <p class="about_para2">
+       </p>
+      
+       <div class="about_us"style="text-align:justify; margin-left:190px;margin-right:170px;font-family: Poppins-light; font-size:22px;">
+        <p>
+            A voting booth or polling booth is a room or cabin in a polling station where voters are able to cast their vote in private to protect the secrecy of the ballot. Usually access to the voting booth is restricted to a single person, with exceptions for voters requiring assistance. The booths aren't in all states but some, as others use a form of mailing.</p>
+       </div>
+    </div>
+  
+ </section>
+
+{% endblock %}

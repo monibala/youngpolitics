@@ -876,18 +876,20 @@ display: block;
        
         margin-top: .5em;
   margin-bottom: .5em;
-  margin-left:550px!important;
+  margin-left:650px!important;
   text-align: left;
       }
       .openButton {
         border: none;
-        
+        font-size:20px;
+        font-weight: bold;
         border-radius: 5px;
-        background-color: #1c87c9;
+        background-color:#3572E8;
         color: white;
-        padding: 14px 20px;
+        padding: 5px 10px;
         cursor: pointer;
-        
+        width:auto;
+        float:right;
         /* position: fixed; */
       }
       .Popup {
@@ -1089,14 +1091,14 @@ display: block;
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse " id="navbarNavDropdown">
-       <ul class="navbar-nav mr-auto ">
+    <div class="collapse navbar-collapse " id="navbarNavDropdown" style="font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";">
+       <ul class="navbar-nav mr-auto">
        <li class="nav-item">
-          <a class="nav-link " href="{% url 'index' %}"><span class="text-uppercase">Home</span></a>
+          <a class="nav-link" href="{% url 'index' %}"><span class="text-uppercase" style="text-decoration: none;">Home</span></a>
         </li>
         <li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle " href="#" data-toggle="dropdown"> <span class="text-uppercase">Discover Us</span> </a>
-				<div class="dropdown-menu dropdown-menu-end fade-down"style="background-color: #DEEAFF;">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown"> <span class="text-uppercase" style="text-decoration: none;">Discover Us</span> </a>
+				<div class="dropdown-menu dropdown-menu-end fade-down">
 					   <a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a>
              <a class="dropdown-item" href="{% url 'message' %}">Message</a>
              <a class="dropdown-item" href="{% url 'ourteam' %}">Our Team</a>
@@ -1107,8 +1109,8 @@ display: block;
         
        <li class="nav-item dropdown">
            
-          <a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Political Survey / Campaign</span></a>
-          <div class="dropdown-menu dropdown-menu-end fade-down" style="background-color: #DEEAFF;">
+          <a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase" style="text-decoration: none;">Political Survey / Campaign</span></a>
+          <div class="dropdown-menu dropdown-menu-end fade-down" >
              <a class="dropdown-item" href="{% url 'poll' %}">Opinion Poll/Exit Poll</a>
              <a class="dropdown-item" href="{% url 'surveyresearch' %}">Political Survey Research</a>
              <a class="dropdown-item" href="{% url 'dtdsurvey' %}">Door to Door Survey</a>
@@ -1129,18 +1131,18 @@ display: block;
           
 
         </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
+      <!-- </ul> -->
+      <!-- <ul class="navbar-nav ml-auto" style="margin-right:700px;"> -->
         <li class="nav-item dropdown" style="margin-right:700px;">
            
-          <a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">IT Services</span></a>
-          <div class="dropdown-menu dropdown-menu-end fade-down" style="width: 880px;padding: -5px;background-color: #DEEAFF;">
-           <div class="row">
+          <a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase" style="text-decoration: none;">IT Services</span></a>
+          <div class="dropdown-menu dropdown-menu-end fade-down" style="width: 950px;margin-left: 15px;">
+           <div class="row"   style="margin-right:25px;">
                <div class="column">
-               <ul class="list-unstyled"> <a class="dropdown-item" href="#"><u>Digital Marketing</u></a>
+               <ul class="list-unstyled" style="margin-left:15px; "> <div class="dropdown-item"  style="color:#1863a6;font-size: large;cursor:auto;background-color: white;">Digital Marketing</div>
              
-                <li><a class="dropdown-item" href="{% url 'fbpromotion' %}">facebook Promotion</a></li>
-                <li><a class="dropdown-item" href="{% url 'twitter' %}">twitter Promotion</a></li>
+                <li><a class="dropdown-item" href="{% url 'fbpromotion' %}">Facebook Promotion</a></li>
+                <li><a class="dropdown-item" href="{% url 'twitter' %}">Twitter Promotion</a></li>
                 <li><a class="dropdown-item" href="{% url 'whatsapp' %}">Whatsapp Marketing</a></li>
                 <li><a class="dropdown-item" href="{% url 'youtube' %}">Youtube Marketing</a></li>
              </ul>
@@ -1149,34 +1151,34 @@ display: block;
              
            
               <div class="column">
-                <ul class="list-unstyled ">  <a class="dropdown-item" href="#"><u>Bulk Sms</u></a>
-                    <li><a class="dropdown-item" href="#">Promotional Sms</a></li>
-                    <li><a class="dropdown-item" href="#">Transitional Sms</a></li>
-                    <li><a class="dropdown-item" href="#">Election Sms <br>Campaigning</a></li>
-                    <li><a class="dropdown-item" href="#">OTP Services</a></li>
+                <ul class="list-unstyled ">  <a class="dropdown-item" href="#" style="color:#1863a6; font-size: large; cursor:auto;background-color: white;">Bulk Sms</a>
+                    <li><a class="dropdown-item" href="{% url 'promotional' %}">Promotional Sms</a></li>
+                    <li><a class="dropdown-item" href="{% url 'transitional' %}">Transitional Sms</a></li>
+                    <li><a class="dropdown-item" href="{% url 'esms' %}">Election Sms <br>Campaigning</a></li>
+                    <li><a class="dropdown-item" href="{% url 'otp' %}">OTP Services</a></li>
                     </ul>
             
               </div>
               <div class="column">
-                <ul class="list-unstyled ">  <a class="dropdown-item" href="#"><u>Voice Call</u></a>
-                <li><a class="dropdown-item" href="#">Voice Broadcast</a></li>
-                <li><a class="dropdown-item" href="#">Voice with DTMF</a></li>
-                <li><a class="dropdown-item" href="#">Text to Voice</a></li>
+                <ul class="list-unstyled ">  <a class="dropdown-item" href="#" style="color:#1863a6; font-size: large; cursor:auto;background-color: white;">Voice Call</a>
+                <li><a class="dropdown-item" href="{% url 'broadcast' %}">Voice Broadcast</a></li>
+                <li><a class="dropdown-item" href="{% url 'dtmf' %}">Voice with DTMF</a></li>
+                <li><a class="dropdown-item" href="{% url 'texttovoice' %}">Text to Voice</a></li>
                 </ul>
               </div>
               <div class="column">
-                <ul class="list-unstyled "><a class="dropdown-item" href="#"><u>Ivr Services</u></a>
-                  <li><a class="dropdown-item" href="#">Hosted IVR</a></li>
-                <li><a class="dropdown-item" href="#">TollFree NumberF</a></li>
-                <li><a class="dropdown-item" href="#">Misscall Alert</a></li>
-                <li><a class="dropdown-item" href="#">Virtual Number</a></li>
+                <ul class="list-unstyled "><a class="dropdown-item" href="#" style="color:#1863a6; font-size: large; cursor:auto;background-color: white;">Ivr Services</a>
+                  <li><a class="dropdown-item" href="{% url 'ivr' %}">Hosted IVR</a></li>
+                <li><a class="dropdown-item" href="{% url 'tollfree' %}">TollFree Number</a></li>
+                <li><a class="dropdown-item" href="{% url 'callalert' %}">Misscall Alert</a></li>
+                <li><a class="dropdown-item" href="{% url 'virtual' %}">Virtual Number</a></li>
                 </ul>
               </div>
               <div class="column">
-                <ul class="list-unstyled "><a class="dropdown-item" href="#"><u>Software/Mobile App</u></a>
-                  <li><a class="dropdown-item" href="#">Website</a></li>
-                <li><a class="dropdown-item" href="#">Janta Darbar Solution</a></li>
-                <li><a class="dropdown-item" href="#">Election Management<br> Software/Mobile App</a></li>
+                <ul class="list-unstyled "><a class="dropdown-item" href="#" style="color:#1863a6; font-size: large; cursor:auto;background-color: white;">Software/Mobile App</a>
+                  <li><a class="dropdown-item" href="{% url 'website' %}">Website</a></li>
+                <li><a class="dropdown-item" href="{% url 'jantadarbar' %}">Janta Darbar Solution</a></li>
+                <li><a class="dropdown-item" href="{% url 'ems' %}">Election Management<br> Software/Mobile App</a></li>
                 </ul>
               </div>
             
@@ -1189,16 +1191,16 @@ display: block;
           
         </li> -->
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> <span class="text-uppercase">Elections</span> </a>
-            <div class="dropdown-menu dropdown-menu-end fade-down" style="background-color: #DEEAFF;">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> <span class="text-uppercase" style="text-decoration: none; margin-left: -450px;">Elections</span> </a>
+            <div class="dropdown-menu dropdown-menu-end fade-down" style="margin-left: -350px;">
                    <a class="dropdown-item" href="{% url 'general' %}">General Elections Result</a>
-                   <a class="dropdown-item" href="#">Manipur Elections</a>
+                   <a class="dropdown-item" href="{% url 'melections' %}">Manipur Elections</a>
                    <!-- <div class="dropdown"> -->
                     <!-- <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      UttarPradesh Election
                     </a> -->
                     <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> -->
-                  <a class="dropdown-item " href="#" data-target="DropdownContent" id="DropdownContent" data-toggle="dropdown" >UttarPradesh Elections</a>
+                  <a class="dropdown-item " href="{% url 'upelections' %}">UttarPradesh Elections</a>
                   <!-- <div class="sub-nav"  ><ul class="menu-depth-1 sub-menu sub-nav-group" style="background-color: #DEEAFF;display:none;" >  -->
                   <ul class="dropdown-menu dropdown-menu-end fade-down"  id="DropdownContent" style="background-color: #DEEAFF;display:none;">
                      <a class="dropdown-item"  href="#">UP Lokshabha Result</a>
@@ -1212,18 +1214,18 @@ display: block;
                   <!-- </div> -->
                    
                     
-                    <a class="dropdown-item " href="#"  data-toggle="dropdown">Polling Booth List</a>
-                    <div class="dropdown-menu dropdown-menu-end fade-down" style="background-color: #DEEAFF;display: none;">
+                    <a class="dropdown-item " href="{% url 'pollbooth' %}"  >Polling Booth List</a>
+                    <div class="dropdown-menu dropdown-menu-end fade-down" style="display: none;">
                         <a class="dropdown-item" href="#">Assam</a>
                     </div>
-                   <!-- <a class="dropdown-item" href="#">Polling Booth List</a> -->
+                  
             </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'blog' %}"><span class="text-uppercase">Blog</span></a>
+          <a class="nav-link" href="{% url 'blog' %}"  style="margin-left: -300px;"><span class="text-uppercase" style="text-decoration: none; ">Blog</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact' %}"><span class="text-uppercase">Contact Us</span></a>
+        <li class="nav-item" >
+          <a class="nav-link" href="{% url 'contact' %}" style="margin-left: -100px;"><span class="text-uppercase" style="text-decoration: none;margin-left: -10px;">Contact Us</span></a>
         </li>
        
       </ul>
@@ -1332,13 +1334,13 @@ display: block;
                 
               </ul>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="col-12 col-sm-6 col-lg-3" >
               <ul class="list-unstyled">
                 <li>
                   <span class="foot_head">Contact Us</span>
                   <hr class="footer_hr">
                  </li>
-                <li>
+                <li style="padding-bottom:5px;">
                   <a href="">
                     <img src="{% static 'assets/images/aus.jpg' %}" alt="" width="50px">
                   </a> 
@@ -1357,7 +1359,7 @@ display: block;
                   </div>
                 </li>
                 
-                <li>
+                <li style="padding-bottom:5px;">
                   <a href="">
                     <img src="{% static 'assets/images/india.png' %}" alt="" width="50px">
                   </a>
@@ -1375,7 +1377,7 @@ display: block;
                     <span class="add_txt">Email: sales@cyberflax.com </span>
                   </div>
                 </li>
-                <li>
+                <li style="padding-bottom:5px;">
                   <a href="">
                     <img src="{% static 'assets/images/uae.png' %}" alt="" width="50px">
                   </a>
@@ -1393,7 +1395,7 @@ display: block;
                     <span class="add_txt">Email: sales@cyberflax.com </span>
                   </div>
                 </li>
-                <li>
+                <li style="padding-bottom:5px;">
                   <a href="">
                     <img src="{% static 'assets/images/us.jpg' %}" alt="" width="50px">
                   </a>

@@ -1,0 +1,96 @@
+{% extends 'basic.html' %}
+
+{% block body %} 
+{% load static %}
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 80%;
+      margin-right:auto;
+      margin-left:auto;
+      
+    }
+    th {
+      background: #3572E8;
+      color: white;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    
+    }
+    
+    /* tr:nth-child(even) {
+      background-color: #dddddd;
+    } */
+    </style>
+<section class="about_us pb-5">
+  <h2 id="about_heading"><span>UttarPradesh Election Results</span>
+      <div class="img_head_container">
+              <img src="static/assets/images/Vector 2.svg" id="vc_2_img" alt="">
+              <img src="static/assets/images/Vector 3.svg" id="vc_3_img" alt="">
+          </div>
+  </h2>
+  <div class="about_text">
+        <div class="row">
+          <div class="col">
+           
+                 <table>
+                  <tr>
+                      <th>Party Name</th>
+                      <th>Contested Seats</th>
+                      <th>Won Seats</th>
+                      <th>Votes Gain</th>
+                      <th>Percentage</th>
+                      <th>Profit Seats</th>
+                      <th>Loss Seats</th>
+                    </tr>
+                   
+                    <tr>
+                      <td>BJP</td>
+                      <td>60</td>
+                      <td>25</td>
+                      <td>20</td>
+                      <td>25%</td>
+                      <td>10</td>
+                      <td>5</td>
+                    </tr>
+                
+                    <tr>
+                      <td>DMK</td>
+                      <td>151</td>
+                      <td>56</td>
+                      <td>20</td>
+                      <td>25%</td>
+                      <td>10</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>INC</td>
+                      <td>125</td>
+                      <td>54</td>
+                      <td>20</td>
+                      <td>25%</td>
+                      <td>10</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>BSP</td>
+                      <td>125</td>
+                      <td>54</td>
+                      <td>20</td>
+                      <td>25%</td>
+                      <td>10</td>
+                      <td>5</td>
+                    </tr>
+                    </table>
+                  
+                  </div>
+                  </div>
+                </div>
+                
+            </section>     
+                    
+{% endblock %}

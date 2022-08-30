@@ -1,0 +1,94 @@
+{% extends 'basic.html' %} 
+{% block body %} 
+{% load static %} 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<section class="about_us pb-5">
+    <h2 id="about_heading"><span>Manipur Assembly Election Results</span>
+        <div class="img_head_container">
+                <img src="static/assets/images/Vector 2.svg" id="vc_2_img" alt="">
+                <img src="static/assets/images/Vector 3.svg" id="vc_3_img" alt="">
+            </div>
+    </h2>
+    <div class="about_text">
+       <p class="about_para1">
+          
+       </p>
+      
+       <p class="about_para2">Manipur 2017 Election Assembly
+       </p>
+      
+       <div class="about_us"style="text-align:justify; margin-left:120px;margin-right:100px;font-family: Poppins-light; font-size:22px;">
+        <p>A total of 60 seats were held in the 2017 assembly elections in Manipur. A total of 19 lakh 14 thousand 543 voters took part here in the Manipur 2017 assembly elections, in the 2017 elections there was about 86 Percent polling here. In the 2017 assembly elections, 40 seats were reserved for general, 1 seat for scheduled and 19 seats for scheduled tribes. The Indian National Congress Party had a majority in 2017 assembly elections. After that Nongthombam Biren Singh took oath as the new Chief Minister of Manipur and become the Chief Minister. In 2017 assembly elections, All India Congress Party was first place from here. If we talk about seats, then in 2017 Assembly elections, Manipur. Indian National Congress Party has 28 seats, Bhartiya Janata Party 21 seats, Naga People’s Front 4 seats, National People’s Party 4 seats and All India Trinamool Congress Party 1 seats, Independent 1 Seats Or Other+ Lok Janashakti Party 1 seats had received.
+If we talk about the Vote percentage, Indian National Congress Party has 35.3 Percent Votes, Bhartiya Janata Party 36.5 Percent Votes, Naga People’s Front 7.2 Percent Votes, National People’s Party 5.1 Percent Votes and All India Trinamool Congress Party 1.4 Percent Votes, Independent Party 5.1 Percent Votes Or Other+ Lok Janashakti Party 9.4 Percent Votes had received.</p>
+       </div>
+       <canvas id="myChart" style="width:75%;max-width:600px;margin-left: auto;margin-right: auto;"></canvas>
+       <p class="about_para2">Manipur 2012 Election Assembly
+    </p>
+   
+    <div class="about_us"style="text-align:justify; margin-left:120px;margin-right:100px;font-family: Poppins-light; font-size:22px;">
+     <p>A total of 60 seats were held in the 2012 assembly elections in Manipur. A total of 19 lakh 14 thousand 543 voters took part here in the Manipur 2012 assembly elections, in the 2012 elections there was about 86 Percent polling here. In the 2017 assembly elections, 40 seats were reserved for general, 1 seat for scheduled and 30 seats for scheduled tribes. The Indian National Congress Party had a majority in 2012 assembly elections. After that Nongthombam Biren Singh took oath as the new Chief Minister of Manipur and become the Chief Minister. In 2012 assembly elections, All India Congress Party was first place from here. If we talk about seats, then in 2012 Assembly elections, Manipur. Indian National Congress Party has 28 seats, Bhartiya Janata Party 21 seats, Naga People’s Front 4 seats, National People’s Party 4 seats and All India Trinamool Congress Party 1 seats, Independent 1 Seats Or Other+ Lok Janashakti Party 1 seats had received.
+If we talk about the Vote percentage, Indian National Congress Party has 40.3 Percent Votes, Bhartiya Janata Party 36.5 Percent Votes, Naga People’s Front 7.2 Percent Votes, National People’s Party 5.1 Percent Votes and All India Trinamool Congress Party 1.4 Percent Votes, Independent Party 5.1 Percent Votes Or Other+ Lok Janashakti Party 9.4 Percent Votes had received.</p>
+</div>
+<canvas id="myChart1" style="width:75%;max-width:600px;margin-left: auto;margin-right: auto;"></canvas>
+
+    <!-- <p class="about_para2">Manipur 2007 Election Assembly
+    </p>
+   
+    <div class="about_us"style="text-align:justify; margin-left:120px;margin-right:100px;font-family: Poppins-light; font-size:22px;">
+     <p>A total of 60 seats were held in the 2007 assembly elections in Manipur. A total of 19 lakh 14 thousand 543 voters took part here in the Manipur 2007 assembly elections, in the 2017 elections there was about 86 Percent polling here. In the 2017 assembly elections, 40 seats were reserved for general, 1 seat for scheduled and 19 seats for scheduled tribes. The Indian National Congress Party had a majority in 2017 assembly elections. After that Nongthombam Biren Singh took oath as the new Chief Minister of Manipur and become the Chief Minister. In 2017 assembly elections, All India Congress Party was first place from here. If we talk about seats, then in 2017 Assembly elections, Manipur. Indian National Congress Party has 28 seats, Bhartiya Janata Party 21 seats, Naga People’s Front 4 seats, National People’s Party 4 seats and All India Trinamool Congress Party 1 seats, Independent 1 Seats Or Other+ Lok Janashakti Party 1 seats had received.
+If we talk about the Vote percentage, Indian National Congress Party has 35.3 Percent Votes, Bhartiya Janata Party 36.5 Percent Votes, Naga People’s Front 7.2 Percent Votes, National People’s Party 5.1 Percent Votes and All India Trinamool Congress Party 1.4 Percent Votes, Independent Party 5.1 Percent Votes Or Other+ Lok Janashakti Party 9.4 Percent Votes had received.</p>
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>    
+</div> -->
+    
+    </div>
+  
+ </section>
+ <script>
+    var xValues = ["BJP", "INC", "NPF", "NPP", "IND","AITC","others"];
+    var yValues = [36.5,35.3,15.6,12,25,35,32];
+    var barColors = ["red", "green","blue","orange","brown","yellow","pink"];
+    
+    new Chart("myChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        title: {
+          display: true,
+          text: ""
+        }
+      }
+    });
+    </script>
+    <script>
+      var xValues = ["BJP", "INC", "NPF", "NPP", "IND","AITC","others"];
+      var yValues = [36.5,35.3,15.6,12,25,35,32];
+      var barColors = ["red", "green","blue","orange","brown","yellow","pink"];
+      
+      new Chart("myChart1", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+          }]
+        },
+        options: {
+          legend: {display: false},
+          title: {
+            display: true,
+            text: ""
+          }
+        }
+      });
+      </script>
+   
+    
+{% endblock %}

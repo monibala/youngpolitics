@@ -1,0 +1,32 @@
+{% extends 'basic.html' %} 
+{% block body %} 
+{% load static %} 
+<section class="about_us pb-5">
+    <h2 id="about_heading"><span>Voice Broadcast</span>
+        <div class="img_head_container">
+                <img src="static/assets/images/Vector 2.svg" id="vc_2_img" alt="">
+                <img src="static/assets/images/Vector 3.svg" id="vc_3_img" alt="">
+            </div>
+    </h2>
+    <div class="about_text" >
+       <p class="about_para1" style="text-align:justify; margin-left:100px;margin-right:75px;font-family: Poppins-light; font-size:22px;list-style-type: none;">
+        Voice Broadcasting is a technique of sending pre-recorded voice messages to your audience.  This technology is often used for alerting communities, notifications, business applications or for promotional purposes.   As a reliable and convenient voice broadcasting solution provider in India, we’re dedicated to meeting the customer’s requirement with real-time results. See the beauty of voice broadcasting.
+       </p>
+       <div class="about_us"style="text-align:justify; margin-left:120px;margin-right:100px;font-family: Poppins-light; font-size:22px;">
+        <p class="about_para2" >Features  </p>
+        <li>Send a pre-recorded message to thousands of users from targeted dialing list</li>
+        <li>Simple Voice Memo upload</li>
+        <li>Multi Language Support with unicode SMS</li>
+        <li>Easy contact list import</li>
+        <li>Automatic redial</li>
+        <li>Message tracking</li>
+        <img src="{% static 'assets/images/voicebroadcast.png' %}"alt="" style="margin-left:780px;margin-top:-200px;max-width:600px;">
+     </div>
+       
+      
+       
+    </div>
+  
+ </section>
+
+{% endblock %}

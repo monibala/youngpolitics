@@ -1,0 +1,64 @@
+{% extends 'basic.html' %} 
+{% block body %} 
+{% load static %} 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    .tollcolumn {
+  float: left;
+  width: 50%;
+  padding:50px;
+}
+
+/* Clear floats after the columns */
+.tollrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<section class="about_us pb-5" >
+    <!-- <h2 id="about_heading"><span>TollFree</span></h2> -->
+        <img src="{% static 'assets/images/toll.jpg' %}"  alt="" style="width:1500px;margin-left:0px;">
+        
+   
+    <div class="about_text" >
+      <div class="about_us"style="text-align:justify;margin-left:120px;margin-right:100px;font-family: Poppins-light; font-size:22px;list-style-type: none;">
+        <!-- <img src="{% static 'assets/images/electionsms.jpg' %}"  alt="" style="border-radius: 50%;width:200px;margin-left:1100px;margin-top:55px;"> -->
+        <p>A toll free number in India is a 1800-XXXX number on which customer can make a call without paying any call charges. Pan India the same number works and no STD charges are levied. A toll free number can be landed and distributed among different team of sales, support , technical etc depending upon the client’s needs. In all a single number for several departments which can be called @ FREE.</p>
+       
+    <p class="about_para2" style="color:#2A5BBA;">Key Features of Toll Free Number</p>
+    <div class="tollrow">
+        <div class="tollcolumn">
+    <li>
+    <i style="font-size:24px;color:#2A5BBA;" class="fa">&#xf2b5;</i>
+   Welcome Greeting
+    <p>Greet your customers in their preferred language. Create a powerful impression on the first few seconds of a customer interaction.</p>
+    </li>
+    <li>
+      <i style="font-size:24px; color:#2A5BBA;" class="material-icons">&#xe8b8;</i>
+      Mini CRM
+      <p>Get the most from our free Mini CRM facility available to each telephone executive. Design fields of your choice with test, dropdown and number options.</p>
+    </li>
+    </div>
+    <div class="tollcolumn">
+    <li>
+      <i style="font-size:24px;color:#2A5BBA;" class="material-icons">&#xe5c3;</i>
+      Multiple language selection
+      <p>Make it easy for your customer to understand the IVR in their own preferred language. Simple understanding at IVR level helps in less customer care executive’s interaction.</p>
+    </li>
+    <li>
+        <i style="font-size:24px;color:#2A5BBA;" class="material-icons">&#xe61d;</i>
+        Call monitoring
+
+        <p>Never miss a business opportunity with missed call list readily available. Daily summary by email for missed call also available as a custom feature</p>
+      </li>
+      </div>
+      </div>
+  </div>
+</div>
+
+ </section>
+
+{% endblock %}
