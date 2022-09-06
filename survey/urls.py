@@ -9,5 +9,6 @@ urlpatterns=[
     path('wrcc/', views.wrcc, name='wrcc'),
     path('voteappeal/', views.voteappeal,name='voteappeal'),
     path('campaign/', views.campaign,name='campaign'),
+    path('campaignmanage/', views.campaignmanage,name='campaignmanage'),
     path('docfilm/', views.docfilm,name='docfilm'),
 ]

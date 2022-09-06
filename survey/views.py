@@ -24,3 +24,6 @@ def campaign(request):
 
 def docfilm(request):
     return render(request, 'docfilm.html')
+
+def campaignmanage(request):
+    return render(request, 'campaignmanage.html')

@@ -13,3 +13,9 @@ def upelections(request):
     return render(request, 'upelections.html')
 def pollbooth(request):
     return render(request, 'pollbooth.html')
+def election2022(request):
+    return render(request, 'election2022.html')
+def election2017(request):
+    return render(request, 'election2017.html')
+def election2012(request):
+    return render(request, 'election2012.html')

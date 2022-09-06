@@ -1,693 +1,1342 @@
 {% extends 'basic.html' %}
 {% block body %}
 {% load static %}
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <meta charset="utf-8"> -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
 <style>
-    .container {
-  position: relative;
-  width: 50%;
+  /**********************************/
+/********** Top News CSS **********/
+/**********************************/
+.top-news {
+    position: relative;
+    width: 100%;
+    padding: 30px 0 0 0;
+}
+
+.top-news .tn-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.top-news .tn-img img {
+    width: 100%;
+}
+
+.top-news .tn-img:hover img {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+.top-news .tn-title {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    padding: 15px 10px 15px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .9));
+    display: flex;
+    align-items: flex-end;
+}
+
+.top-news .tn-title a {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.top-news .tn-left .tn-title a {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.top-news .tn-title a:hover {
+    color: #FF6F61;
+}
+
+.top-news .tn-left {
+    margin-bottom: 30px;
+}
+
+.top-news .tn-right {
+    margin-bottom: 60px;
+    padding: 0 30px;
+}
+
+.top-news .tn-right .col-md-6 {
+    padding: 0;
+}
+
+.top-news .slick-prev,
+.top-news .slick-next {
+    width: 28px;
+    height: 28px;
+    z-index: 1;
+    transition: .5s;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 4px;
+}
+
+.top-news .slick-prev {
+    left: 30px;
+}
+
+.top-news .slick-next {
+    right: 30px;
+}
+
+.top-news .slick-prev:hover,
+.top-news .slick-prev:focus,
+.top-news .slick-next:hover,
+.top-news .slick-next:focus {
+    color: #ffffff;
+    background: #FF6F61;
+}
+
+.top-news .slick-prev::before,
+.top-news .slick-next::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.top-news .slick-prev::before {
+    content: "\f104";
+}
+
+.top-news .slick-next::before {
+    content: "\f105";
+}
+
+
+/**********************************/
+/******* Category News CSS ********/
+/**********************************/
+.cat-news {
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.cat-news .col-md-6 {
+    margin-bottom: 30px;
+}
+
+.cat-news h2 {
+    color: #000000;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px double #000000;
+}
+
+.cat-news .cn-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.cat-news .cn-img img {
+    width: 100%;
+}
+
+.cat-news .cn-img:hover img {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+.cat-news .cn-title {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    padding: 15px 10px 15px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .9));
+    display: flex;
+    align-items: flex-end;
+}
+
+.cat-news .cn-title a {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.cat-news .cn-title a:hover {
+    color: #FF6F61;
+}
+
+.cat-news .slick-prev,
+.cat-news .slick-next {
+    top: -62px;
+    width: 28px;
+    height: 28px;
+    z-index: 1;
+    transition: .5s;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 4px;
+}
+
+.cat-news .slick-prev {
+    left: calc(100% - 85px);
+}
+
+.cat-news .slick-next {
+    right: 14px;
+}
+
+.cat-news .slick-prev:hover,
+.cat-news .slick-prev:focus,
+.cat-news .slick-next:hover,
+.cat-news .slick-next:focus {
+    color: #ffffff;
+    background: #FF6F61;
+}
+
+.cat-news .slick-prev::before,
+.cat-news .slick-next::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.cat-news .slick-prev::before {
+    content: "\f104";
+}
+
+.cat-news .slick-next::before {
+    content: "\f105";
+}
+
+
+/**********************************/
+/********** Tab News CSS **********/
+/**********************************/
+.tab-news {
+    position: relative;
+}
+
+.tab-news .col-md-6 {
+    margin-bottom: 60px;
+}
+
+.tab-news .nav.nav-pills .nav-link {
+    color: #ffffff;
+    background: #000000;
+    border-radius: 0;
+}
+
+.tab-news .nav.nav-pills .nav-link:hover,
+.tab-news .nav.nav-pills .nav-link.active {
+    color: #ffffff;
+    background: #FF6F61;
+}
+
+.tab-news .tab-content {
+    padding: 30px 15px 15px 15px;
+    background: rgba(0, 0, 0, .05);
+}
+
+.tab-news .tn-news {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #ffffff;
+}
+
+.tab-news .tn-img {
+    width: 150px;
+}
+
+.tab-news .tn-img img {
+    width: 150px;
+}
+
+.tab-news .tn-title {
+    padding: 10px 15px;
+}
+
+.tab-news .tn-title a {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all .3s;
+}
+
+.tab-news .tn-title a:hover {
+    color: #FF6F61;
+}
+
+
+
+/**********************************/
+/********** Main News CSS *********/
+/**********************************/
+.main-news {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.main-news .col-md-4 {
+    margin-bottom: 30px;
+}
+
+.main-news .mn-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-news .mn-img img {
+    width: 100%;
+}
+
+.main-news .mn-img:hover img {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+.main-news .mn-title {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    padding: 15px 10px 15px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .9));
+    display: flex;
+    align-items: flex-end;
+}
+
+.main-news .mn-title a {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.main-news .mn-title a:hover {
+    color: #FF6F61;
+}
+
+.main-news .mn-list {
+    margin-bottom: 30px;
+}
+
+.main-news .mn-list h2 {
+    color: #000000;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px double #000000;
+}
+
+.main-news .mn-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-news .mn-list u/l li {
+    margin: 0 0 12px 22px; 
+}
+
+.main-news .mn-list ul li:last-child {
+    margin-bottom: 0; 
+}
+
+.main-news .mn-list ul li a {
+    color: #000000;
+    display: block;
+    line-height: 23px;
+}
+
+.main-news .mn-list ul li::before {
+    position: absolute;
+    content: '\f061';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #000000;
+    left: 1px;
+}
+
+.main-news .mn-list ul li a:hover {
+    color: #FF6F61;
+}
+
+
+/**********************************/
+/********* Breadcrumb CSS *********/
+/**********************************/
+.breadcrumb-wrap {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+}
+
+.breadcrumb-wrap .breadcrumb {
+    margin: 25px 0 0 0;
+    padding: 0;
+    background: none;
+}
+
+.breadcrumb-wrap .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: #353535;
+}
+
+.breadcrumb-wrap .breadcrumb .breadcrumb-item.active {
+    color: #353535;
+}
+
+
+/**********************************/
+/********* Single News CSS ********/
+/**********************************/
+.single-news {
+    position: relative;
+    width: 100%;
+    padding: 25px 0 0 0;
+    margin-bottom: 15px;
+}
+
+.single-news .sn-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.single-news .sn-img img {
+    width: 100%;
+}
+
+.single-news .sn-content {
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.single-news .sn-content h1.sn-title {
+    display: block;
+    width: 100%;
+    color: #000000;
+}
+
+.single-news .sn-related {
+    margin-bottom: 45px;
+}
+
+.single-news .sn-related h2 {
+    color: #000000;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px double #000000;
+}
+
+.single-news .sn-slider .sn-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.single-news .sn-slider .sn-img img {
+    width: 100%;
+}
+
+.single-news .sn-slider .sn-img:hover img {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+.single-news .sn-slider .sn-title {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    padding: 15px 10px 15px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .9));
+    display: flex;
+    align-items: flex-end;
+}
+
+.single-news .sn-slider .sn-title a {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.single-news .sn-slider .sn-title a:hover {
+    color: #FF6F61;
+}
+
+.single-news .sn-slider .slick-prev,
+.single-news .sn-slider .slick-next {
+    top: -62px;
+    width: 28px;
+    height: 28px;
+    z-index: 1;
+    transition: .5s;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 4px;
+}
+
+.single-news .sn-slider .slick-prev {
+    left: calc(100% - 85px);
+}
+
+.single-news .sn-slider .slick-next {
+    right: 14px;
+}
+
+.single-news .sn-slider .slick-prev:hover,
+.single-news .sn-slider .slick-prev:focus,
+.single-news .sn-slider .slick-next:hover,
+.single-news .sn-slider .slick-next:focus {
+    color: #ffffff;
+    background: #FF6F61;
+}
+
+.single-news .sn-slider .slick-prev::before,
+.single-news .sn-slider .slick-next::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.single-news .sn-slider .slick-prev::before {
+    content: "\f104";
+}
+
+.single-news .sn-slider .slick-next::before {
+    content: "\f105";
+}
+
+
+/**********************************/
+/*********** Sidebar CSS **********/
+/**********************************/
+.sidebar {
+    position: relative;
+    width: 100%;
+}
+
+.sidebar .sidebar-widget {
+    position: relative;
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.sidebar .sidebar-widget h2.sw-title {
+    color: #000000;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px double #000000;
+}
+
+.sidebar .sidebar-widget .news-list {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.sidebar .news-list .nl-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sidebar .news-list .nl-item .nl-img {
+    width: 100px;
+}
+
+.sidebar .news-list .nl-item .nl-img img {
+    width: 100px;
+}
+
+.sidebar .news-list .nl-item .nl-title {
+    padding-left: 15px;
+}
+
+.sidebar .news-list .nl-item .nl-title a {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .3s;
+}
+
+.sidebar .news-list .nl-item .nl-title a:hover {
+    color: #FF6F61;
+}
+
+.sidebar .sidebar-widget .tab-news {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.sidebar .tab-news .nav.nav-pills .nav-link {
+    color: #ffffff;
+    background: #000000;
+    border-radius: 0;
+}
+
+.sidebar .tab-news .nav.nav-pills .nav-link:hover,
+.sidebar .tab-news .nav.nav-pills .nav-link.active {
+    color: #ffffff;
+    background: #FF6F61;
+}
+
+.sidebar .tab-news .tab-content {
+    padding: 15px 0 0 0;
+    background: transparent;
+}
+
+.sidebar .tab-news .tab-content .container {
+    padding: 0;
+}
+
+.sidebar .tab-news .tn-news {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sidebar .tab-news .tn-img {
+    width: 100px;
+}
+
+.sidebar .tab-news .tn-img img {
+    width: 100px;
+}
+
+.sidebar .tab-news .tn-title {
+    padding: 0 0 0 15px;
+}
+
+.sidebar .tab-news .tn-title a {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .3s;
+}
+
+.sidebar .tab-news .tn-title a:hover {
+    color: #FF6F61;
+}
+
+.sidebar .sidebar-widget .category {
+    position: relative;
+}
+
+.sidebar .category ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar .category ul li {
+    margin: 0 0 12px 22px; 
+}
+
+.sidebar .category ul li:last-child {
+    margin-bottom: 0; 
+}
+
+.sidebar .category ul li a {
+    display: inline-block;
+    color: #000000;
+    line-height: 23px;
+}
+
+.sidebar .category ul li a:hover {
+    color: #FF6F61;
+}
+
+.sidebar .category ul li::before {
+    position: absolute;
+    content: '\f061';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #000000;
+    left: 1px;
+}
+
+.sidebar .category ul li span {
+    display: inline-block;
+    float: right;
+}
+
+.sidebar .sidebar-widget .tags {
+    position: relative;
+}
+
+.sidebar .sidebar-widget .tags a {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    color: #000000;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.sidebar .sidebar-widget .tags a:hover {
+    color: #ffffff;
+    background: #FF6F61;
+    border: 1px solid #FF6F61;
+}
+
+.sidebar .sidebar-widget .image a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sidebar .sidebar-widget .image img {
+    max-width: 100%;
+    transition: .3s;
+}
+
+.sidebar .sidebar-widget .image img:hover {
+    transform: scale(1.1);
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+
+/**********************************/
+/********** Contact CSS ***********/
+/**********************************/
+.contact {
+    position: relative;
+    padding: 25px 0 15px 0;
+}
+
+.contact .contact-form,
+.contact .contact-info {
+    margin-bottom: 45px;
+}
+
+.contact .contact-info h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contact .contact-info h4 i {
+    color: #000000;
+    margin-right: 5px;
+}
+
+.contact .social {
+    position: relative;
+    width: 100%;
+}
+
+.contact .social a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    width: 40px;
+    height: 40px;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.contact .social a i {
+    color: #000000;
+}
+
+.contact .social a:hover {
+    background: #FF6F61;
+    border-color: #FF6F61;
+}
+
+.contact .social a:hover i {
+    color: #ffffff;
+}
+/* Blog */
+.blog {
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+  transition: 0.3s;
+  width:100%;
+  height:150px;
+  margin-bottom:300px;
  
-}
-
-.image {
-  display: block;
-  width: 600px;
-  height: auto;
-}
-
-.overlay {
-    border-radius: 15px;
-  border: 2px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 650px;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #2A5BBA;
-}
-
-.container:hover .overlay {
-  opacity: 1;
-}
-
-.cap_text {
-  color: white;
-  font-size: 35px;
-  font-family: Poppins-Regular;
-  position: absolute;
-  line-height: 1.5;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-/* Election care serve */
-
-
-
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-.quote-wrapper {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  display: inline-block;
-  margin:22px;
-}
-
-.text {
-  width: 120%;
-  height: 120%;
-  /*BLUE BG*/
-  background: radial-gradient(
-    ellipse at center,
-    rgba(0, 128, 172, 1) 0%,
-    rgba(0, 128, 172, 1) 70%,
-    rgba(0, 128, 172, 0) 70.3%
-  );
- 
-  position: relative;
-  margin: 15px;
-  color: white;
-}
-
-.text p {
-  height: 100%;
-  font-size: 10px;
-  line-height: 1.5;
-  padding: 0px;
   
-  /* text-align: center; */
-  font-style: italic;
-  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
 }
-
-.text::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  /* float:left; */
-  shape-outside: polygon(
-    0 0,
-    98% 0,
-    50% 6%,
-    23.4% 17.3%,
-    6% 32.6%,
-    0 50%,
-    6% 65.6%,
-    23.4% 82.7%,
-    50% 94%,
-    98% 100%,
-    0 100%
-  );
-  shape-margin: 7%;
+.blogtext {
+    width: 100%; 
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+   color: black;
+ /* padding-top:15px;
+ padding-left: 0px; */
+ line-height: 2.0;
 }
-
-.text p::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  /* float: right; */
-  shape-outside: polygon(
-    2% 0%,
-    100% 0%,
-    100% 100%,
-    2% 100%,
-    50% 94%,
-    76.6% 82.7%,
-    94% 65.6%,
-    100% 50%,
-    94% 32.6%,
-    76.6% 17.3%,
-    50% 6%
-  );
-  shape-margin: 7%;
-}
-
-
-
-.quote-wrapper::before {
-  
-  font-size: 270px;
-  height: 82px;
-  line-height: 0.78;
-  line-height: 1;
-  position: absolute;
-  top: -100px;
-  left: 25px;
-
-  font-family: sans-serif, serif;
-  color: #ccc;
-  opacity: 0.9;
-}
-
-@media (min-width: 850px) {
-  .quote-wrapper {
-    width: 200px;
-    height: 200px;
-  }
-
-  .quote-wrapper::before {
-    font-size: 80px;
-  }
-
-  .text p {
-    font-size: 25px;
-    display:contents;
-    /* padding-top: 800px;
-    padding-left: 300px; */
-    text-align:justify;
-    font-style: italic;
-  }
-
+.blog:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
  
 }
 
+.blog_container {
+  /* padding: 2px 16px; */
+  /* padding-left:1px;
+  padding-right: 2px; */
+  /* padding:5px; */
+}
 </style>
-<!-- politic servey banner start -->
-<section class="politic_survey_banner " >
-       <div class="container-fluid pt-5 px-0 ">
-         <div class="row no-gutters ">
-           <div class="col-12 col-lg-5">
-             <div class="surv_card">
-               <div class="surv_card-body">
-                 <h3>
-                   Political Survey & Information Technology drives all we do
-                 </h3>
-                 <h5>If you are preparing for the election you have reached the right place</h5>
-                 <p>Political Survey & Information Technology drives all we do</p>
-                 <div class="survey_buttons">
-                    <a id="srv_btn1" href="#">Survey/Campaign</a>
-                    <a id="srv_btn2" href="#">IT Services</a>
-                 </div>
-                 <div class="check_txt">
-                   <img src="{% static 'assets/images/tick_sign.svg' %}" alt="">
-                   <span>Election related surveys</span><br>
-                   <img src="{% static 'assets/images/tick_sign.svg' %}" alt="">
-                   <span>Election Results</span>
-                 </div>
-               </div>
-             </div>
-           </div>
-           <div class="col-12 col-lg-7 ">
-             <div class="img_contain ">
-               
-                  <img src="static/assets/images/Rectangle 12.svg" alt="" id="img2_surv">
-               
-               
-                 <img src="static/assets/images/Group 7.svg" alt="" id="img1_surv">
-              
-               
-               
-             </div>
-           </div>
-           <div class="col-12 ">
-             <p id="last_surv_sec">
-               Our IT Based Services - Pre Poll Survey, Election war Room Call Center, 
-               Election Management Software, Booth Man
-             </p>
-           </div>
-         </div>
-       </div>
-    </section>
-<!-- politic servey banner end -->
-<!-- Election change section start -->
-
-    <section class="ech" style="font-family: Poppins-light; line-height: 25px; font-size :22px;">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters">
-          <div class="col-12 col-md-6">
-            <!-- <div class="content"> -->
-              <h3 style="color:#2A5BBA;">Who We are
-               </h3>
-              <p style="font-family:Poppins-light; font-size:20px; line-height:1.5;">
-                The Young Politics is the election Care best Political Consulting & Political Campaign Services firm in India. 
-                Help you boost up your image & reputation using the Voters. We are the Best political 
-                consulting firm in India. We make Visible you on multiple channels connections and resources. 
-                We Deliver Public Leader & Party Menifesto or Voice to more peoples to aware them. So Join best 
-                political campaign management agency of india. We have professional & skilled staff. election care have 
-                Good experience in political management in India.  We helped many national & state level leaders to 
-                convey their message & Campaign in society through political campaign India. Election Care Services are 
-                Digital Base. With Seasoned strategist and the best creative mind in the Political  and IT services, 
-                We have the right team to get the good things done…
-              </p>
-            <!-- </div> -->
-          </div>
-          <!-- <div class="col-12 d-none d-lg-block col-lg-1"> -->
-            <!-- <div class="img_content"> -->
-                <div class="container">
-                    <img src="{% static 'assets/politics.jpg' %}" class="image">
-                    <div class="overlay">
-                      <div class="cap_text">The Young Politics Team <br>"Empowering the Youth For a Better Future"</div>
-                    </div>
-                  </div>
-              <!-- <img src="static/assets/images/Rectangle 20.svg" alt="" id="img_1ech"> -->
-            <!-- </div> -->
-          </div>
-       
-        </div>
-      </div>
-    </section>
-<!-- Election change end -->
-<!-- Vision -->
-<!-- Our capabilities section start -->
-    <section class="our_cap" >
-      <div class="oc_head">
-        <h3><span> </span><span id="oc_hehad_cap"> Our Services</span>
-        <!-- <h3><span> </span><span id="oc_hehad_cap"> Our Vision</span> -->
-            <!-- <div class="img_head_container">
-                <img src="static/assets/images/Vector 2.svg" id="vc_2_img" alt="">
-                <img src="static/assets/images/Vector 3.svg" id="vc_3_img" alt="">
-            </div> -->
-        <!-- </h3>  -->
-        <marquee width="100%" scrollamount='10' direction="left" style="
-															padding: 15px;
-															font-size: 25px;
-															color: black;
-															background: #f4fafa;
-															font-weight: 500;
-															font-family: system-ui;
-														">
-              <div class="container-fluid py-3">
-          <div class="row">
-              <!-- <div class="col-12 col-lg-6"> -->
-                    <div class="card-container">
-                        <div id="card-img-container1" class="card-img-container">
-                            <img src="static/assets/images/lead_train.svg"alt="">
-                        </div>
-                        <div class="card-content">
-                            
-                            <h3 id="card1_head" class="card_head" style="font-family:Poppins-Medium;">
-                              Leadership Traning
-                            </h3>
-                            <!-- <p style="font-family: Poppins-light; font-size :20px;">
-                                We work with top training providers to tie those leadership roles to you. 
-                                We also have the expertise to help you develop your internal leadership development
-                                 program.
-                            </p> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-              </div>
-              <!-- <div class="col-12 col-lg-6"> -->
-                    <!-- <div class="card-container"> -->
-                        <div id="card-img-container2" class="card-img-container">
-                            <img src="static/assets/images/Group 10.svg"alt="">
-                        </div>
-                        <div class="card-content">
-                            
-                            <h3 id="card2_head" class="card_head">
-                              Shadow Campaign
-                            </h3>
-                            <!-- <p style="font-family: Poppins-light; font-size :20px;">
-                                We work with top training providers to tie those leadership roles to you. 
-                                We also have the expertise to help you develop your internal leadership development
-                                 program.
-                            </p> -->
-                        </div>
-                    <!-- </div> -->
-              <!-- </div> -->
-              <!-- <div class="col-12 col-lg-6"> -->
-                    <!-- <div class="card-container"> -->
-                        <div id="card-img-container3" class="card-img-container">
-                            <img src="static/assets/images/Group 8.svg"alt="">
-                        </div>
-                        <div class="card-content">
-                            
-                            <h3 id="card3_head" class="card_head">
-                              Vote Appeal and Awareness
-                            </h3>
-                            <!-- <p style="font-family: Poppins-light; font-size :20px;">
-                                We work with top training providers to tie those leadership roles to you. 
-                                We also have the expertise to help you develop your internal leadership development
-                                 program.
-                            </p> -->
-                        </div>
-                    <!-- </div> -->
-              <!-- </div> -->
-              <!-- <div class="col-12 col-lg-6"> -->
-                    <!-- <div class="card-container"> -->
-                        <div id="card-img-container4" class="card-img-container">
-                            <img src="static/assets/images/Group 11.svg"alt="">
-                        </div>
-                        <div class="card-content">
-                            
-                            <h3 id="card4_head" class="card_head">
-                              Door to Door Campaign
-                            </h3>
-                            <!-- <p style="font-family: Poppins-light; font-size :20px;">
-                                We work with top training providers to tie those leadership roles to you. 
-                                We also have the expertise to help you develop your internal leadership development
-                                 program.
-                            </p> -->
-                        </div>
-                    <!-- </div> -->
-              <!-- </div> -->
-              <!-- <div class="card-container"> -->
-                <div id="card-img-container4" class="card-img-container">
-                    <img src="static/assets/images/Group 11.svg"alt="">
+<!-- Top News Start-->
+<div class="top-news">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 tn-left">
+                <div class="row tn-slider">
+                     <p style="font-family:Poppins-light; font-size:20px; line-height:1.5;text-align: justify;">
+                        The Young Politics is the election Care best Political Consulting & Political Campaign Services firm in India. 
+                        Help you boost up your image & reputation using the Voters. We are the Best political 
+                        consulting firm in India. We make Visible you on multiple channels connections and resources. 
+                        We Deliver Public Leader & Party Manifesto or Voice to more peoples to aware them.  We have professional & skilled staff. We have 
+                        Good experience in political management in India.  We helped many national & state level leaders to 
+                        convey their message & Campaign in society through political campaign India. Election Care Services are 
+                        Digital Base. With Seasoned strategist and the best creative mind in the Political  and IT services, 
+                        We have the right team to get the good things done…
+                      </p>
                 </div>
-                <div class="card-content">
-                    
-                    <h3 id="card4_head" class="card_head">
-                    Advertising Vans
-                    </h3>
-                    <!-- <p style="font-family: Poppins-light; font-size :20px;">
-                        We work with top training providers to tie those leadership roles to you. 
-                        We also have the expertise to help you develop your internal leadership development
-                         program.
-                    </p> -->
-                </div>
-            <!-- </div> -->
-            <!-- <div class="card-container"> -->
-              <div id="card-img-container4" class="card-img-container">
-                  <img src="static/assets/images/Group 11.svg"alt="">
-              </div>
-              <div class="card-content">
-                  
-                  <h3 id="card4_head" class="card_head">
-                   Fund Raising Programme
-                  </h3>
-                  <!-- <p style="font-family: Poppins-light; font-size :20px;">
-                      We work with top training providers to tie those leadership roles to you. 
-                      We also have the expertise to help you develop your internal leadership development
-                       program.
-                  </p> -->
-              </div>
-          <!-- </div> -->
-              <!-- <div class="col-12 col-lg-6"> -->
-                    <!-- <div class="card-container"> -->
-                        <div id="card-img-container5" class="card-img-container">
-                            <img src="static/assets/images/intro_consult.svg"alt="">
-                        </div>
-                        <div class="card-content">
-                            
-                            <h3 id="card5_head" class="card_head">
-                               Voter Communication
-                            </h3>
-                            <!-- <p style="font-family: Poppins-light; font-size :20px;">
-                                We work with top training providers to tie those leadership roles to you. 
-                                We also have the expertise to help you develop your internal leadership development
-                                 program.
-                            </p> -->
-                        </div>
-                    <!-- </div> -->
-              <!-- </div>
-              <div class="col-12 col-lg-6"> -->
-                    <!-- <div class="card-container"> -->
-                        <div id="card-img-container6" class="card-img-container">
-                            <img src="static/assets/images/fon.svg"alt="">
-                        </div>
-                        <div class="card-content">
-                            
-                            <h3 id="card6_head" class="card_head">
-                               Booth Management
-                            </h3>
-                            <!-- <p style="font-family: Poppins-light; font-size :20px;">
-                                We work with top training providers to tie those leadership roles to you. 
-                                We also have the expertise to help you develop your internal leadership development
-                                 program.
-                            </p> -->
+            </div>
+            <div class="col-md-6 tn-right">
+                <div class="row" >
+                    <div class="col-md-6" >
+                        <div class="tn-img">
+                            <img src="static/assets/images/poll.jpg" />
+                            <div class="tn-title">
+                                <a href="{% url 'poll' %}">Opinion Poll and Exit Poll</a>
+                            </div>
                         </div>
                     </div>
-              <!-- </div> -->
-          </div>
-      </div>
-      </marquee>
-      <!-- <marquee width="100%" scrollamount='10' direction="left" style="
-      padding: 15px;
-      font-size: 25px;
-      color: black;
-      background: #f4fafa;
-      font-weight: 500;
-      font-family: system-ui;
-    ">   
-<div class="container"> -->
-  <!-- <h2>Carousel Example</h2> -->
-  <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:1000px;margin-left: -180px;"> -->
-    <!-- Indicators -->
-    <!-- <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol> -->
-
-    <!-- Wrapper for slides -->
-    <!-- <div class="carousel-inner">
-
-      <div class="item active">
-        <img src="{% static 'assets/leadership.jpg' %}" alt="" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Leadership</h3>
-          <p>
-Leadership Traning
-We work with top training providers to tie those leadership roles to you. We also have the expertise to help you develop your internal leadership development program.</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="{% static 'assets/analytics.jpg' %}" alt="Chicago" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Analytics & Political Intelligence
-</h3>
-          <p>Just an indication of the current trend will make you stronger in the future election campaign to put in the best effort and achieve results. Data analytics is also used to understand election results.</p>
-          </div>
-      </div>
-    
-      <div class="item">
-        <img src="{% static 'assets/dtd.jpg' %}" alt="New York" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Door To Door Campaign
-</h3>
-          <p>We provide door-to-door campaign services for the promotion of the candidate</p>
-        </div>
-      </div>
-   <div class="item">
-        <img src="{% static 'assets/commun.png' %}" alt="" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Voter Communication
-</h3>
-          <p>Regular coordination of a good leader with the voters of the area is necessary, our team is able to work on it.</p>
-        </div>
-      </div>
-  
-    </div>
-       Left and right controls -->
-      <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-  
-</marquee> --> 
-    </section>
-<!-- our capabilities section end -->
-
-<!-- Election care services start -->
-<!-- <div class="fancy-border "> -->
-    <!-- <div class="container-fluid">
-       <div class="row">
-           <div class="col-12 col-md-6"> -->
-              <!-- <div class="img-container-fancy"> -->
-                  <!-- <img src="static/assets/vision.webp" alt="" style="width:600px;"> -->
-              <!-- </div> -->
-           <!-- </div>
-           <div class="col-12 col-md-6"> -->
-               <!-- <div class="fancy_border_content"> -->
-                   <!-- <h3 >
-                       <span id="ecs_head">Vision and Values</span>
-                      
-                   </h3>
-                   <p  style="font-family:Poppins-light; font-size:20px; line-height:1.5;">
-                    Our aim is to mobilise a generation of young adults to become more politically active. This starts with engaging them through social media and grassroots projects such as school initiatives. We then aim to ensure that there is accessible political education to all those who seek it through our learn section and articles. An exchange of ideas is also key to our mission through our events, debates and opinion articles. Finally, we act as a facilitator, linking young people with partner campaigns according to their interests.
-                   </p> -->
-                   <!-- <p>
-                        In this game, our task is to understand the behavior of the voter and make a strategy to make 
-                        it in our favor.
-                   </p>
-                   <p>
-                        There will be many of you candidates who either want to contest elections or have taken a step
-                         ahead and formed your own party. After this you leave the work to us, say that since 10 years
-                          our experienced team has worked with many parties like you and you, who have covered the 
-                          journey from floor to Top together with us.
-                   </p>
-                   <p>
-                       Our name is Election Care and Google Bhaiya will take you to us with great ease. 
-                       We are the Election Management Company who will give a new flight to your political career.
-                   </p> -->
-               <!-- </div> -->
-           </div>
-       </div>
-    </div>
-<!-- </div> -->
-
-<!-- Election Care Services end -->
-<!-- Election care serve also start -->
-<section class="elec_serve_also">
-    <h3><span id="ecs_head">Our Services</span>
-      <!-- <div class="img_head_container">
-                <img src="static/assets/images/Vector 2.svg" id="vc_2_img" alt="">
-                <img src="static/assets/images/Vector 3.svg" id="vc_3_img" alt="">
-            </div> -->
-      <br> </h3>
-    <div class="ecsa_container">
-      <!-- <div class="row no-gutters" > -->
-        <div class="col-sm-3">
-      <div class="quote-wrapper">
-        <blockquote class="text" >
-          <p>Opinion<br> Poll And<br> Exit Poll</p>
-         
-        </blockquote>
-        </div>
-        </div>
-        <div class="col-sm-3">
-      <div class="quote-wrapper">
-        <blockquote class="text" >
-          <p>Door to <br>Door<br> Campaign</p>
-         
-        </blockquote>
-        </div>
-        </div>
-        <div class="col-sm-3">
-      <div class="quote-wrapper">
-        <blockquote class="text" >
-          <p>Booth<br> Label<br> Micro</p>
-         
-        </blockquote>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="quote-wrapper">
-          <blockquote class="text" >
-            <p>War Room<br> Setup</p>
-           
-          </blockquote>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="quote-wrapper">
-            <blockquote class="text" >
-              <p>Election<br> Management<br> Software</p>
-             
-            </blockquote>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="quote-wrapper">
-              <blockquote class="text" >
-                <p>Printing <br>Solution</p>
-               
-              </blockquote>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="quote-wrapper">
-                <blockquote class="text" >
-                  <p>Social<br> Media<br> Management</p>
-                 
-                </blockquote>
+                    <div class="col-md-6">
+                        <div class="tn-img" >
+                            <img src="static/assets/images/pollbooth.jpg" style="width:280px;height:185px;"/>
+                            <div class="tn-title">
+                                <a href="{% url 'voteappeal' %}">Vote Appeal and Awareness</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="tn-img">
+                            <img src="static/assets/politics.jpg" />
+                            <div class="tn-title">
+                                <a href="{% url 'surveyresearch' %}">Political Survey Research</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="tn-img">
+                            <img src="static/assets/campaign.png" style="width:335px;"/>
+                            <div class="tn-title">
+                                <a href="{% url 'campaign' %}">Election Campaign Mnagement</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="quote-wrapper">
-                  <blockquote class="text" >
-                    <p>Political<br> Documentary <br>Film</p>
-                   
-                  </blockquote>
-                  </div>
-                </div>
-      </div>
-       <!-- <div class="esa_btn"  style="width:33.33%x;height:300;background-color: white;border-radius: 35px;">Opinion Poll/Exit Poll</div>
-       <div class="esa_btn" style="width:600px;height:300;background-color: white;" >Political Survey Research<div class="container">Political survey is a synonym for new success with a new flight in democratic election.Political survey and research shows us to adapt our election environment and ideology of conflict in the field of opposite candidate.</div></div>
-       <div class="esa_btn" style="width:300px;height:300;background-color: white;" >Door to Door Survey<div class="container">Databases received from door to door surveys can be able to build a very strong hold (via Social Media, SMS, Voice Call) through IT Services</div></div>
-       <div class="esa_btn" style="width:100px;height:300px;background-color: white;">Booth Label Micro</div><div class="container">Young Politics works on the principle of voter power.Our Surveyors had a good experinece and they have special political experience at the booth level of what and how to talk on booth star.</div>
-       <div class="esa_btn" style="width:300px;height:300;background-color: white;" >War Room Call Center<div class="container"></div>
-       <div class="esa_btn" style="width:300px;height:300;background-color: white;">Voter List in Excel<div class="container"></div>
-       <div class="esa_btn" style="width:300px;height:300;background-color: white;">Voter Slip Printing<div class="container"></div>
-       <div class="esa_btn" style="width:300px;height:300;background-color: white;">Vote Appeal and Awareness<div class="container"></div>
-       <div class="esa_btn" style="width:300px;height:300;background-color: white;" >Digital Media Election Campaign<div class="container"></div>
-       <div class="esa_btn" style="width:300px;height:300;background-color: white;" >Social Media Campaign Management<div class="container"></div>
-       <div class="esa_btn" style="width:300px;height:300;background-color: white;" >Election Management Campaign<div class="container"></div>
-       <div class="esa_btn" style="width:300px;height:300;background-color: white;">Political Documentary Film<div class="container"></div> -->
-       <!-- <a class="esa_btn" style="border-radius: 80%;" href="#">Opinion Poll and Exit Poll</a>
-       <a class="esa_btn" href="#">Lorem ipsum</a>
-       <a class="esa_btn" href="#">Lorem ipsum</a>
-       <a class="esa_btn" href="#">Lorem ipsum</a>
-       <a class="esa_btn" href="#">Lorem ipsum</a>
-       <a class="esa_btn" href="#">Lorem ipsum</a>
-       <a class="esa_btn" href="#">Lorem ipsum</a>
-       <a class="esa_btn" href="#">Lorem ipsum</a>
-       <a class="esa_btn" href="#">Lorem ipsum</a> -->
+            </div>
+        </div>
+    </div>
 </div>
-</section>
-<!-- Election care serve also end -->
-<!-- Political Campaign and promotion start-->
-<!-- <div class="pcnp "> -->
-    <!-- <div class="container-fluid my-content_pcnp"> -->
-       <div class="row" style="margin:15px;text-align:justify;">
-           <div class="col-12 col-lg-6">
-               <div class="pcnp_content">
-                   <h3 >
-                       <span >Election</span>
-                       <!-- <div class="img_head_container">
-                         <img src="static/assets/images/Vector 2.svg" id="vc_2_img" alt="">
-                         <img src="static/assets/images/Vector 3.svg" id="vc_3_img" alt="">
-                       </div> -->
-                       <br><span> Campaign & Promotion</span>
-                   </h3>
-                   <p>
-                       There has been an increase in the political agitation regarding the assembly elections, 
-                       such that the stir only increases when the election is about to come. There are two teams 
-                       in the election game, the voter and the candidate.
-                   </p>
-                   <p>
-                        In this game, our task is to understand the behavior of the voter and make a strategy to make 
-                        it in our favor.
-                   </p>
-                   <p>
-                        There will be many of you candidates who either want to contest elections or have taken a step
-                         ahead and formed your own party. After this you leave the work to us, say that since 10 years
-                          our experienced team has worked with many parties like you and you, who have covered the 
-                          journey from floor to Top together with us.
-                   </p>
-                   <p>
-                       Our name is Election Care and Google Bhaiya will take you to us with great ease. 
-                       We are the Election Management Company who will give a new flight to your political career.
-                   </p>
-               </div>
-           </div>
-           <div class="col-12 col-lg-6">
-              <!-- <div class="img-container-pcnp"> -->
-                  <img src="static/assets/camp.jpg" alt="" style="margin-left:100px;margin-top:100px;width:600px;height:400px;">
-              <!-- </div> -->
-           </div>
-       <!-- </div> -->
-    </div>
-<!-- </div> -->
+<!-- Top News End-->
 
-<!-- Political Campaign and promotion end-->
+
+<!-- Category News Start-->
+<div class="cat-news">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <h2>Opinion Poll and Exit Poll</h2>
+              <div class="row cn-slider">
+                  <div class="col-md-6">
+                      <div class="cn-img" style="width:500px;">
+                          <img src="static/assets/poll.jpg" />
+                          <div class="cn-title">
+                              <a href="{% url 'poll' %}">Opinion Poll and Exit Poll</a>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- <div class="col-md-6">
+                      <div class="cn-img">
+                          <img src="static/img/news-350x223-2.jpg" />
+                          <div class="cn-title">
+                              <a href="">Lorem ipsum dolor sit</a>
+                          </div>
+                      </div>
+                  </div> -->
+                  <!-- <div class="col-md-6">
+                      <div class="cn-img">
+                          <img src="static/img/news-350x223-3.jpg" />
+                          <div class="cn-title">
+                              <a href="">Lorem ipsum dolor sit</a>
+                          </div>
+                      </div>
+                  </div> -->
+              </div>
+          </div>
+          <div class="col-md-6">
+              <h2>Campaign Management</h2>
+              <div class="row cn-slider">
+                  <div class="col-md-6">
+                      <div class="cn-img" style="width:580px;">
+                          <img src="static/assets/camp.jpg" />
+                          <div class="cn-title">
+                              <a href="{% url 'campaignmanage' %}">Campaign Management</a>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- <div class="col-md-6">
+                      <div class="cn-img">
+                          <img src="static/img/news-350x223-5.jpg" />
+                          <div class="cn-title">
+                              <a href="">Lorem ipsum dolor sit</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="cn-img">
+                          <img src="static/img/news-350x223-1.jpg" />
+                          <div class="cn-title">
+                              <a href="">Lorem ipsum dolor sit</a>
+                          </div>
+                      </div>
+                  </div> -->
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Category News End-->
+
+<!-- Category News Start-->
+<div class="cat-news">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <h2>IT Services</h2>
+              <div class="row cn-slider">
+                  <div class="col-md-6">
+                      <div class="cn-img">
+                          <img src="static/assets/digital.jpg" />
+                          <div class="cn-title">
+                              <a href="{% url 'fbpromotion' %}">Digital Marketing</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="cn-img">
+                          <img src="static/assets/bulksms.png" style="height:160px;"/>
+                          <div class="cn-title">
+                              <a href="{% url 'promotional' %}">Bulk SMS</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="cn-img">
+                          <img src="static/assets/call.jpg" style="height:160px;" />
+                          <div class="cn-title">
+                              <a href="{% url 'broadcast' %}">Voice Call</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="cn-img">
+                        <img src="static/assets/ivrservice.jpg" style="height:160px;" />
+                        <div class="cn-title">
+                            <a href="{% url 'ivr' %}">IVR Services</a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <h2>UttarPradesh Elections</h2>
+              <div class="row cn-slider">
+                  <div class="col-md-6">
+                      <div class="cn-img">
+                          <img src="static/assets/upres.jpeg" style="height:160px;"/>
+                          <div class="cn-title">
+                              <a href="{% url 'upelections' %}">UP Lokshabha Result</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="cn-img">
+                          <img src="static/assets/elect.jpg" style="height:160px;"/>
+                          <div class="cn-title">
+                              <a href="{% url 'election2022' %}">2022 Assembly Election</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="cn-img">
+                          <img src="static/assets/2017elec.jpg" style="height:160px;" />
+                          <div class="cn-title">
+                              <a href="{% url 'election2017' %}">2017 Assembly Election</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="cn-img">
+                        <img src="static/assets/2012.jpg" style="height:160px;" />
+                        <div class="cn-title">
+                            <a href="{% url 'election2012' %}">2012 Assembly Election</a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Category News End-->
+
+<!-- Tab News Start-->
+<div class="tab-news">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <ul class="nav nav-pills nav-justified">
+                  <li class="nav-item">
+                      <a class="nav-link active" data-toggle="pill" href="#featured">Our services</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                      <a class="nav-link" data-toggle="pill" href="#popular">Popular News</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-toggle="pill" href="#latest">Latest News</a>
+                  </li> -->
+              </ul>
+
+              <div class="tab-content">
+                  <div id="featured" class="container tab-pane active">
+                      <div class="tn-news">
+                          <div class="tn-img">
+                            <img src="static/assets/images/lead_train.svg"alt=""style="width:50px;height:30px;">
+                          </div>
+                          <div class="tn-title"  style="margin-left:-80px;">
+                            <h3>Leadership Training</h3>
+                          </div>
+                      </div>
+                      <div class="tn-news">
+                          <div class="tn-img">
+                            <img src="static/assets/images/Group 10.svg"alt=""style="width:50px;height:30px;">
+                          </div>
+                          <div class="tn-title"  style="margin-left:-80px;">
+                            <h3>Sahdow Campaign</h3>
+                            
+                          </div>
+                      </div>
+                      <div class="tn-news">
+                          <div class="tn-img">
+                            <img src="static/assets/images/Group 8.svg"alt=""style="width:50px;height:30px;">
+                          </div>
+                          <div class="tn-title" style="margin-left:-80px;">
+                            <h3 style="white-space:nowrap;">Vote Appeal and Awareness</h3>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="popular" class="container tab-pane fade">
+                      <div class="tn-news">
+                          <div class="tn-img">
+                            <img src="static/assets/images/Group 11.svg"alt="" style="width:100px;height:80px;">
+                          </div>
+                          <div class="tn-title"  style="text-align:left;">
+                              <h3>Door to Door Campaign</h3>
+                          </div>
+                      </div>
+                      <div class="tn-news">
+                          <div class="tn-img">
+                              <img src="img/news-350x223-5.jpg" />
+                          </div>
+                          <div class="tn-title">
+                           
+                          </div>
+                      </div>
+                      <div class="tn-news">
+                          <div class="tn-img">
+                              <img src="img/news-350x223-1.jpg" />
+                          </div>
+                          <div class="tn-title">
+                              <a href="">Lorem ipsum dolor sit amet</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="latest" class="container tab-pane fade">
+                      <div class="tn-news">
+                          <div class="tn-img">
+                              <img src="img/news-350x223-2.jpg" />
+                          </div>
+                          <div class="tn-title">
+                              <a href="">Lorem ipsum dolor sit amet</a>
+                          </div>
+                      </div>
+                      <div class="tn-news">
+                          <div class="tn-img">
+                              <img src="img/news-350x223-3.jpg" />
+                          </div>
+                          <div class="tn-title">
+                              <a href="">Lorem ipsum dolor sit amet</a>
+                          </div>
+                      </div>
+                      <div class="tn-news">
+                          <div class="tn-img">
+                              <img src="img/news-350x223-4.jpg" />
+                          </div>
+                          <div class="tn-title">
+                              <a href="">Lorem ipsum dolor sit amet</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col-md-6">
+              <ul class="nav nav-pills nav-justified">
+                  <li class="nav-item">
+                      <a class="nav-link active" data-toggle="pill" href="#m-viewed">Our Services</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                      <a class="nav-link" data-toggle="pill" href="#m-read">Most Read</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-toggle="pill" href="#m-recent">Most Recent</a>
+                  </li> -->
+              </ul>
+
+              <div class="tab-content">
+                  <div id="m-viewed" class="container tab-pane active">
+                      <div class="tn-news">
+                          <div class="tn-img">
+                            <img src="static/assets/door.png"alt="" style="width:50px;height:30px;">
+                          </div>
+                          <div class="tn-title"  style="margin-left:-80px;">
+                          <h3 style="white-space:nowrap;">Door to Door Campaign</h3>
+                          </div>
+                      </div>
+                      <div class="tn-news">
+                          <div class="tn-img">
+                            <img src="static/assets/fund.png"alt="" style="width:50px;height:30px;">
+                          </div>
+                          <div class="tn-title" style="margin-left:-80px;">
+                            <h3 style="white-space:nowrap;">Fund Raising Programme</h3>
+                          </div>
+                      </div>
+                      <div class="tn-news">
+                          <div class="tn-img">
+                            <img src="static/assets/booth.jpg"alt=""style="width:50px;height:30px;">
+                          </div>
+                          <div class="tn-title"style="margin-left:-80px;">
+                            <h3>Booth Management</h3>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="m-read" class="container tab-pane fade">
+                      <div class="tn-news">
+                          <div class="tn-img">
+                              <img src="img/news-350x223-2.jpg" />
+                          </div>
+                          <div class="tn-title">
+                              <a href="">Lorem ipsum dolor sit amet</a>
+                          </div>
+                      </div>
+                      <div class="tn-news">
+                          <div class="tn-img">
+                              <img src="img/news-350x223-1.jpg" />
+                          </div>
+                          <div class="tn-title">
+                              <a href="">Lorem ipsum dolor sit amet</a>
+                          </div>
+                      </div>
+                      <div class="tn-news">
+                          <div class="tn-img">
+                              <img src="img/news-350x223-3.jpg" />
+                          </div>
+                          <div class="tn-title">
+                              <a href="">Lorem ipsum dolor sit amet</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="m-recent" class="container tab-pane fade">
+                      <div class="tn-news">
+                          <div class="tn-img">
+                              <img src="img/news-350x223-4.jpg" />
+                          </div>
+                          <div class="tn-title">
+                              <a href="">Lorem ipsum dolor sit amet</a>
+                          </div>
+                      </div>
+                      <div class="tn-news">
+                          <div class="tn-img">
+                              <img src="img/news-350x223-5.jpg" />
+                          </div>
+                          <div class="tn-title">
+                              <a href="">Lorem ipsum dolor sit amet</a>
+                          </div>
+                      </div>
+                      <div class="tn-news">
+                          <div class="tn-img">
+                              <img src="img/news-350x223-1.jpg" />
+                          </div>
+                          <div class="tn-title">
+                              <a href="">Lorem ipsum dolor sit amet</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Tab News Start-->
+<!-- Blogs -->
+<!-- Main News Start-->
+<div class="main-news" >
+  <div class="container" style="margin-bottom:100px; ">
+      <!-- <div class="row">
+          <div class="col-lg-6 "> -->
+              <div class="row" style="flex-wrap: wrap; display: flex;">
+              <div class="col-md-3" style="outline: 1px solid grey;padding:0px;margin:5px;max-width:23%;">
+                    <div class="blog">
+                      <div class="mn-img">
+                          <img src="static/assets/upres.jpeg"   style="height:200px;"/>
+                          <div class="blog_container">
+                            <span class="blogtext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</span>
+                          </div>
+                          <!-- <div class="mn-title">
+                              <a href="">UP Election Result</a>
+                          </div> -->
+                      </div>
+                  
+                </div>
+                  </div>
+                  <div class="col-md-3" style="outline: 1px solid grey; padding:0px;margin:5px;max-width:23%;">
+                    <div class="blog" style="width:100%;">
+                      <div class="mn-img">
+                          <img src="static/assets/2017elec.jpg"  style="height:200px;"/>
+                          <div class="blog_container">
+                            <span class="blogtext">The Indian National Congress Party had a majority in 2017 assembly elections. After that Nongthombam Biren Singh took oath as the new Chief Minister of Manipur and become the Chief Minister. In 2017 assembly elections, All India Congress Party was first place from here. If we talk about seats, then in 2017 Assembly elections, Manipur. Indian National Congress Party has 28 seats, Bhartiya Janata Party 21 seats, Naga People’s Front 4 seats, National People’s Party 4 seats and All India Trinamool Congress Party 1 seats, Independent 1 Seats Or Other+ Lok Janashakti Party 1 seats had received. </span>
+                          </div>
+                          <!-- <div class="mn-title">
+                              <a href="">campaign Management</a>
+                          </div> -->
+                      </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3" style="outline: 1px solid grey; padding:0px;margin:5px;max-width:23%;">
+                    <div class="blog">
+                      <div class="mn-img">
+                          <img src="{% static 'assets/images/pollvoting.webp' %}"style="height:200px;"/>
+                          <div class="blog_container">
+                            <span class="blogtext">A voting booth or polling booth is a room or cabin in a polling station where voters are able to cast their vote in private to protect the secrecy of the ballot. Usually access to the voting booth is restricted to a single person, with exceptions for voters requiring assistance. The booths aren't in all states but some, as others use a form of mailing.</span>
+                          </div>
+                          <!-- <div class="mn-title">
+                              <a href="">Lorem ipsum dolor sit</a>
+                          </div> -->
+                      </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3" style="outline: 1px solid grey; padding:0px;margin:5px;max-width:23%;">
+                    <div class="blog">
+                      <div class="mn-img">
+                          <img src="static/assets/2017elec.jpg"  style="height:200px;"/>
+                          <div class="blog_container">
+                            <span class="blogtext">The Indian National Congress Party had a majority in 2017 assembly elections. After that Nongthombam Biren Singh took oath as the new Chief Minister of Manipur and become the Chief Minister. In 2017 assembly elections, All India Congress Party was first place from here. If we talk about seats, then in 2017 Assembly elections, Manipur. Indian National Congress Party has 28 seats, Bhartiya Janata Party 21 seats, Naga People’s Front 4 seats, National People’s Party 4 seats and All India Trinamool Congress Party 1 seats, Independent 1 Seats Or Other+ Lok Janashakti Party 1 seats had received. </span>
+                          </div>
+                        
+                      </div>
+                      </div>
+                  </div>
+                  <!-- <div class="col-md-4">
+                      <div class="mn-img">
+                          <img src="static/img/news-350x223-4.jpg" />
+                          <div class="mn-title">
+                              <a href="">Lorem ipsum dolor sit</a>
+                          </div>
+                      </div>
+                  </div> -->
+                  <!-- <div class="col-md-4">
+                      <div class="mn-img">
+                          <img src="static/img/news-350x223-5.jpg" />
+                          <div class="mn-title">
+                              <a href="">Lorem ipsum dolor sit</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="mn-img">
+                          <img src="static/img/news-350x223-1.jpg" />
+                          <div class="mn-title">
+                              <a href="">Lorem ipsum dolor sit</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="mn-img">
+                          <img src="static/img/news-350x223-2.jpg" />
+                          <div class="mn-title">
+                              <a href="">Lorem ipsum dolor sit</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="mn-img">
+                          <img src="static/img/news-350x223-3.jpg" />
+                          <div class="mn-title">
+                              <a href="">Lorem ipsum dolor sit</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="mn-img">
+                          <img src="static/img/news-350x223-4.jpg" />
+                          <div class="mn-title">
+                              <a href="">Lorem ipsum dolor sit</a>
+                          </div>
+                      </div>
+                  </div> -->
+              </div>
+          </div>
+
+          <!-- <div class="col-lg-3">
+              <div class="mn-list">
+                  <h2>Read More</h2>
+                  <ul>
+                      <li><a href="">Lorem ipsum dolor sit amet</a></li>
+                      <li><a href="">Pellentesque tincidunt enim libero</a></li>
+                      <li><a href="">Morbi id finibus diam vel pretium enim</a></li>
+                      <li><a href="">Duis semper sapien in eros euismod sodales</a></li>
+                      <li><a href="">Vestibulum cursus lorem nibh</a></li>
+                      <li><a href="">Morbi ullamcorper vulputate metus non eleifend</a></li>
+                      <li><a href="">Etiam vitae elit felis sit amet</a></li>
+                      <li><a href="">Nullam congue massa vitae quam</a></li>
+                      <li><a href="">Proin sed ante rutrum</a></li>
+                      <li><a href="">Curabitur vel lectus</a></li>
+                  </ul>
+              </div>
+          </div> -->
+      </div>
+  </div>
+</div>
+<!-- Main News End-->
 
    
  {% endblock %}
